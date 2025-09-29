@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "A starter kit for your Next.js project",
+  title: "Unstuck - AI Gaming Assistant",
+  description: "Level up your game with AI-powered assistance. Transparent desktop overlay for instant help while you play.",
 };
 
 export default function RootLayout({
