@@ -14,7 +14,7 @@ export function Header() {
             width={25}
             height={25}
           />
-          <span className="text-xl font-semibold tracking-tight">Unstuck</span>
+          <span className="text-xl font-bold tracking-tight">Unstuck</span>
         </div>
 
         {/* Actions */}

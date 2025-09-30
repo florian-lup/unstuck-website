@@ -1,32 +1,20 @@
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { MessageSquare, Hammer, BookOpen, Scroll, Wrench } from "lucide-react";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 import { UnstuckApp } from "../app/unstuck-app";
 
 const features = [
   {
-    icon: MessageSquare,
-    title: "Smart Chat",
-    description: "Natural conversations with AI that understands your game context and questions.",
+    title: "Lightning Fast",
+    description: "Get instant, concise answers without interrupting your gameplay flow.",
   },
   {
-    icon: Hammer,
-    title: "Build Guides",
-    description: "Get optimal character builds, skill trees, and equipment recommendations instantly.",
+    title: "Performance Optimized",
+    description: "Minimal RAM and CPU usage ensures smooth gaming with no frame drops.",
   },
   {
-    icon: BookOpen,
-    title: "Strategy Guides",
-    description: "Learn winning strategies, tactics, and gameplay tips from expert knowledge.",
-  },
-  {
-    icon: Scroll,
-    title: "Lore & Story",
-    description: "Explore deep lore, character backstories, and world-building without spoilers.",
-  },
-  {
-    icon: Wrench,
-    title: "Troubleshooting",
-    description: "Quick solutions for bugs, technical issues, and game configuration problems.",
+    title: "No Alt-Tabbing Required",
+    description: "Stay in the game and use the transparent overlay while playing without losing focus.",
   },
 ];
 
@@ -36,6 +24,9 @@ export function Features() {
       <div className="mx-auto">
         {/* Section Header */}
         <div className="text-left mb-12">
+          <Badge variant="default" className="mb-4 text-sm font-medium">
+            Playground
+          </Badge>
           <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
             Powerful Features for Every Gamer
           </h2>
@@ -61,19 +52,20 @@ export function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
             return (
-              <Card key={index} className="border-2">
-                <CardHeader>
-                  <div className="mb-2 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Icon className="size-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription>{feature.description}</CardDescription>
-                </CardHeader>
-              </Card>
+              <Accordion key={index} type="single" collapsible defaultValue={`item-${index}`} className="px-4 w-full">
+                <AccordionItem value={`item-${index}`}>
+                  <AccordionTrigger className="text-xl font-semibold">
+                    {feature.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {feature.description}
+                  </AccordionContent>
+                  <Separator className="mt-4" />
+                </AccordionItem>
+              </Accordion>
             );
           })}
         </div>

@@ -1,21 +1,31 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Cpu, Gamepad2, Languages } from "lucide-react";
+import { MessageSquare, Hammer, BookOpen, Scroll, Wrench, Languages } from "lucide-react";
 
 const benefits = [
   {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Get instant, concise answers without interrupting your gameplay flow.",
+    icon: MessageSquare,
+    title: "Smart Chat",
+    description: "Natural conversations with AI that understands your game context and questions.",
   },
   {
-    icon: Cpu,
-    title: "Performance Optimized",
-    description: "Minimal RAM and CPU usage ensures smooth gaming with no frame drops.",
+    icon: Hammer,
+    title: "Build Guides",
+    description: "Get optimal character builds, skill trees, and equipment recommendations instantly.",
   },
   {
-    icon: Gamepad2,
-    title: "Stay in the Game",
-    description: "No alt-tabbing required. Use the transparent overlay while playing.",
+    icon: BookOpen,
+    title: "Strategy Guides",
+    description: "Learn winning strategies, tactics, and gameplay tips from expert knowledge.",
+  },
+  {
+    icon: Scroll,
+    title: "Lore & Story",
+    description: "Explore deep lore, character backstories, and world-building without spoilers.",
+  },
+  {
+    icon: Wrench,
+    title: "Troubleshooting",
+    description: "Quick solutions for bugs, technical issues, and game configuration problems.",
   },
   {
     icon: Languages,
