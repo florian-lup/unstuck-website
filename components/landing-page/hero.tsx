@@ -3,26 +3,42 @@ import { Download } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 md:pt-40 md:pb-24">
-      <div className="mx-auto max-w-3xl text-center">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-15 pt-32 pb-16 md:pt-40 md:pb-24">
+      <div className="max-w-4xl text-left">
         {/* Heading */}
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-gradient">
-          A teammate that won't go AFK
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-6xl mb-6 text-gradient">
+          A teammate that won&apos;t go AFK
         </h1>
 
         {/* Description */}
-        <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl">
           Unstuck is a transparent desktop overlay that provides instant AI-powered
           guidance while you play. No alt-tabbing, just seamless gaming.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex justify-center">
+        <div className="flex justify-start">
           <Button size="lg" className="gap-2 w-full sm:w-auto">
             <Download className="size-5" />
             Download for Windows
           </Button>
         </div>
+      </div>
+
+      {/* Demo Video */}
+      <div className="flex justify-center mt-12">
+        <video
+          className="rounded-xl"
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
+        >
+          <source src="/unstuck-demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
   );
