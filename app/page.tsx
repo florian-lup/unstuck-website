@@ -3,6 +3,7 @@ import { Hero } from "@/components/landing-page/hero";
 import { Features } from "@/components/landing-page/features";
 import { Benefits } from "@/components/landing-page/benefits";
 import { Pricing } from "@/components/landing-page/pricing";
+import { CreditsCTA } from "@/components/landing-page/credits-cta";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Features />
         <Benefits />
         <Pricing />
+        <CreditsCTA />
       </main>
 
       <footer className="border-t py-12 bg-muted/30">
