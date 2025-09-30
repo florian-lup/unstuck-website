@@ -28,7 +28,7 @@ export function Features() {
             Playground
           </Badge>
           <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
-            Powerful Features for Every Gamer
+            You can't install skill, but we can patch it
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
             From casual to competitive, Unstuck adapts to your needs with specialized AI modes

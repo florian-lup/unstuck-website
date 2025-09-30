@@ -1,6 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check } from "lucide-react";
+import { Check, Download } from "lucide-react";
 
 const plans = [
   {
@@ -16,6 +19,8 @@ const plans = [
       "Get wrecked while reading guides",
       "Your teammates judging you",
     ],
+    cta: "Stay Losing",
+    variant: "outline" as const,
   },
   {
     name: "Free",
@@ -29,6 +34,8 @@ const plans = [
       "All supported games",
       "Regular updates",
     ],
+    cta: "Get Started",
+    variant: "outline" as const,
   },
   {
     name: "Pro",
@@ -43,20 +50,27 @@ const plans = [
       "Custom overlay themes",
       "No ads",
     ],
+    cta: "Coming Soon",
+    variant: "default" as const,
   },
 ];
 
 export function Pricing() {
+  const handleLoserClick = () => {
+    // Open Google in a new window
+    window.open('https://www.google.com', '_blank');
+  };
+
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div className="mx-auto max-w-5xl">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-            Simple, Transparent Pricing
+            Don't be the reason for the surrender vote
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Start free and upgrade when you&apos;re ready for unlimited power
+            Start free and upgrade when you&apos;re ready to help maintain our spaghetti code
           </p>
         </div>
 
@@ -92,13 +106,26 @@ export function Pricing() {
                   ))}
                 </ul>
               </CardContent>
+
+              <CardFooter>
+                <Button 
+                  variant={plan.variant} 
+                  size="lg" 
+                  className="w-full"
+                  onClick={plan.name === "Loser" ? handleLoserClick : undefined}
+                  disabled={plan.name === "Pro"}
+                >
+                  {plan.name === "Free" && <Download className="mr-2 size-4" />}
+                  {plan.cta}
+                </Button>
+              </CardFooter>
             </Card>
           ))}
         </div>
 
         {/* Additional Info */}
         <p className="text-center text-sm text-muted-foreground mt-8">
-          All plans include access to our core features. Cancel anytime, no questions asked.
+          Cancel anytime, no questions asked. Respawn not included.
         </p>
       </div>
     </section>
