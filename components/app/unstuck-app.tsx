@@ -21,19 +21,20 @@ import { Button } from "@/components/ui/button";
 import { Toggle } from "@/components/ui/toggle";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { useState } from "react";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { useState, useRef, useEffect } from "react";
 
 export function UnstuckApp() {
   const [activeTab, setActiveTab] = useState<"guides" | "builds" | "lore" | "troubleshooting" | null>(null);
   const [isChatOpen, setIsChatOpen] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedGame, setSelectedGame] = useState("World of Warcraft");
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const componentRef = useRef<HTMLDivElement>(null);
 
   const games = [
     "World of Warcraft",
@@ -43,11 +44,60 @@ export function UnstuckApp() {
     "Dota 2"
   ];
 
-  const handleDropdownOpenChange = (open: boolean) => {
-    setIsDropdownOpen(open);
-    if (open && isChatOpen) {
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
+  // Handle dragging
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (isDragging) {
+        const deltaX = e.clientX - dragStart.x;
+        const deltaY = e.clientY - dragStart.y;
+        setPosition({ x: position.x + deltaX, y: position.y + deltaY });
+        setDragStart({ x: e.clientX, y: e.clientY });
+      }
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging, dragStart, position]);
+
+  const handleDropdownToggle = () => {
+    const newState = !isDropdownOpen;
+    setIsDropdownOpen(newState);
+    if (newState && isChatOpen) {
       setIsChatOpen(false);
     }
+  };
+
+  const handleGameSelect = (game: string) => {
+    setSelectedGame(game);
+    setIsDropdownOpen(false);
   };
 
   const handleChatToggle = () => {
@@ -57,52 +107,83 @@ export function UnstuckApp() {
     setIsChatOpen(!isChatOpen);
   };
 
+  const handleDragStart = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setDragStart({ x: e.clientX, y: e.clientY });
+  };
+
   return (
-    <div className="w-full max-w-[624px] mx-auto flex flex-col h-[500px] gap-3 p-3 rounded-xl">
+    <div 
+      ref={componentRef}
+      className="w-full max-w-[624px] mx-auto flex flex-col h-[500px] gap-3 p-3 rounded-xl"
+      style={{ 
+        transform: `translate(${position.x}px, ${position.y}px)`,
+        cursor: isDragging ? 'grabbing' : 'default'
+      }}>
       {/* Top Navigation Bar */}
       <div className="flex items-center justify-between px-1 py-1 rounded-full"
            style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
         <div className="flex items-center gap-2">
-          {/* Game Selector */}
-          <DropdownMenu open={isDropdownOpen} onOpenChange={handleDropdownOpenChange} modal={false}>
-            <DropdownMenuTrigger asChild>
-              <Button 
-                variant="outline" 
-                size="sm"
-                className="gap-2 text-gray-200 hover:text-white rounded-full border-0 min-w-[200px] justify-start"
-                style={{ backgroundColor: 'transparent' }}>
-                <Gamepad2 className="size-4" />
-                <span className="text-sm">{selectedGame}</span>
-                <ChevronDown className={`size-3 transition-transform duration-200 ml-auto ${isDropdownOpen ? 'rotate-180' : ''}`} />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent 
-              className="rounded-xl border-0 p-1 bg-transparent"
-              sideOffset={8}
-              style={{ 
-                backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3)'
-              }}>
-              {games.map((game) => (
-                <DropdownMenuItem
-                  key={game}
-                  onClick={() => setSelectedGame(game)}
-                  className="text-gray-300 hover:!bg-white/10 hover:text-white cursor-pointer rounded-full focus:bg-white/10 focus:text-white bg-transparent"
-                  style={{ backgroundColor: 'transparent' }}>
-                  {game}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {/* Game Selector - Custom Dropdown */}
+          <div className="relative" ref={dropdownRef}>
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={handleDropdownToggle}
+              className="gap-2 text-gray-200 hover:text-white rounded-full border-0 min-w-[200px] justify-start border border-white/20"
+              style={{ backgroundColor: 'transparent' }}>
+              <Gamepad2 className="size-4" />
+              <span className="text-sm">{selectedGame}</span>
+              <ChevronDown className={`size-3 ml-auto ${isDropdownOpen ? 'rotate-180' : ''}`} />
+            </Button>
+            
+            {isDropdownOpen && (
+              <div 
+                className="absolute top-full left-0 mt-2 rounded-xl border-0 p-1 min-w-[200px] z-50"
+                style={{ 
+                  backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3)'
+                }}>
+                {games.map((game) => (
+                  <button
+                    key={game}
+                    onClick={() => handleGameSelect(game)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:!bg-white/10 hover:text-white cursor-pointer rounded-full bg-transparent"
+                    style={{ backgroundColor: 'transparent' }}>
+                    {game}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
           
           {/* Speak Button */}
-          <Toggle 
-            variant="default" 
-            size="sm"
-            className="gap-1.5 text-gray-300 hover:!bg-white/10 hover:text-white data-[state=on]:!bg-red-500/20 rounded-full px-3 bg-transparent [&[data-state=on]>svg]:text-red-400 [&[data-state=on]>span]:text-white">
-            <Mic className="size-4" />
-            <span className="text-sm">Speak</span>
-          </Toggle>
+          <Tooltip>
+            <TooltipTrigger asChild onClick={(e) => e.preventDefault()}>
+              <div className="inline-block">
+                <Toggle 
+                  variant="default" 
+                  size="sm"
+                  pressed={isSpeaking}
+                  onPressedChange={setIsSpeaking}
+                  className="gap-1.5 text-gray-300 hover:!bg-white/10 hover:text-white data-[state=on]:!bg-red-500/20 rounded-full px-3 bg-transparent [&[data-state=on]>svg]:text-red-400 [&[data-state=on]>span]:text-white">
+                  <Mic className="size-4" />
+                  <span className="text-sm">Speak</span>
+                </Toggle>
+              </div>
+            </TooltipTrigger>
+            <TooltipContent 
+              side="bottom"
+              sideOffset={8}
+              className="!bg-transparent border-0 rounded-lg text-white text-xs backdrop-blur-md [&_svg]:!hidden [&>*]:last:!hidden"
+              style={{ 
+                backgroundColor: 'rgba(0, 0, 0, 1) !important',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
+                backdropFilter: 'blur(8px)'
+              }}>
+              <span>Voice Chat Coming Soon</span>
+            </TooltipContent>
+          </Tooltip>
           
           {/* Chat Button */}
           <Button 
@@ -139,8 +220,9 @@ export function UnstuckApp() {
           <Button 
             variant="ghost" 
             size="icon"
+            onMouseDown={handleDragStart}
             className="size-8 text-gray-300"
-            style={{ backgroundColor: 'transparent' }}>
+            style={{ backgroundColor: 'transparent', cursor: 'grab' }}>
             <Grip className="size-4" />
           </Button>
         </div>
@@ -215,7 +297,7 @@ export function UnstuckApp() {
         </div>
 
         {/* Divider */}
-        <div className="h-px mb-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+        <div className="h-px" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
 
         {/* Response Card */}
         <Card 
@@ -270,29 +352,24 @@ export function UnstuckApp() {
         <div className="relative flex items-center gap-2">
           <Input 
             placeholder="Ask about your game..."
-            className="pr-20 border-0 text-gray-200 placeholder:text-gray-500 rounded-full bg-transparent"
+            className="pr-20 border-0 text-white placeholder:text-gray-300 rounded-full bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
             style={{ 
               backgroundColor: 'transparent',
-              boxShadow: 'none'
+              boxShadow: 'none',
+              outline: 'none'
             }}
           />
           <div className="absolute right-2 flex items-center gap-1">
             <Button 
               size="icon"
-              className="size-7 rounded-full"
-              style={{ 
-                backgroundColor: 'transparent',
-                color: 'rgb(156, 163, 175)'
-              }}>
+              variant="ghost"
+              className="size-7 rounded-full text-gray-400 hover:!bg-white/10 hover:text-white bg-transparent">
               <CornerDownLeft className="size-4" />
             </Button>
             <Button 
               size="icon"
-              className="size-7 rounded-full"
-              style={{ 
-                backgroundColor: 'transparent',
-                color: 'rgb(156, 163, 175)'
-              }}>
+              variant="ghost"
+              className="size-7 rounded-full text-gray-400 hover:!bg-white/10 hover:text-white bg-transparent">
               <X className="size-4" />
             </Button>
           </div>

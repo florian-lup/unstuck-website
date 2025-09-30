@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { MessageSquare, Hammer, BookOpen, Scroll, Wrench } from "lucide-react";
-import { UnstuckApp } from "./unstuck-app";
+import { UnstuckApp } from "../app/unstuck-app";
 
 const features = [
   {
