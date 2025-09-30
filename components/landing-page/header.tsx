@@ -11,9 +11,8 @@ export function Header() {
           <Image
             src="/unstuck-logo.svg"
             alt="Unstuck Logo"
-            width={32}
-            height={32}
-            className="dark:invert"
+            width={25}
+            height={25}
           />
           <span className="text-xl font-semibold tracking-tight">Unstuck</span>
         </div>
