@@ -1,9 +1,22 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 
 const plans = [
+  {
+    name: "Loser",
+    price: "$0",
+    description: "For those who insist on using a browser 🤷",
+    badge: "Why though?",
+    features: [
+      "Alt-tab out of your game constantly",
+      "Miss crucial moments while typing",
+      "No overlay integration (obviously)",
+      "Manually copy-paste everything",
+      "Get wrecked while reading guides",
+      "Your teammates judging you",
+    ],
+  },
   {
     name: "Free",
     price: "$0",
@@ -16,8 +29,6 @@ const plans = [
       "All supported games",
       "Regular updates",
     ],
-    cta: "Get Started",
-    variant: "outline" as const,
   },
   {
     name: "Pro",
@@ -32,8 +43,6 @@ const plans = [
       "Custom overlay themes",
       "No ads",
     ],
-    cta: "Upgrade to Pro",
-    variant: "default" as const,
   },
 ];
 
@@ -52,7 +61,7 @@ export function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <Card 
               key={index} 
@@ -83,12 +92,6 @@ export function Pricing() {
                   ))}
                 </ul>
               </CardContent>
-
-              <CardFooter>
-                <Button variant={plan.variant} size="lg" className="w-full">
-                  {plan.cta}
-                </Button>
-              </CardFooter>
             </Card>
           ))}
         </div>
