@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-15 pt-32 pb-16 md:pt-40 md:pb-24">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-20 pt-32 pb-16 md:pt-40 md:pb-16">
       <div className="max-w-4xl text-left">
         {/* Heading */}
         <h1 className="text-2xl font-bold tracking-tight md:text-5xl mb-6 text-gradient">
@@ -25,9 +25,9 @@ export function Hero() {
       </div>
 
       {/* Demo Video */}
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-12 mx-auto">
         <video
-          className="rounded-xl"
+          className="rounded-xl w-full h-[600px] object-cover"
           autoPlay
           muted
           loop

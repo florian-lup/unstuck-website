@@ -32,7 +32,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-15 pt-32 pb-16 md:pt-40 md:pb-24">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-15 pt-32 pb-16 md:pt-16 md:pb-24">
       <div className="mx-auto">
         {/* Section Header */}
         <div className="text-left mb-12">
@@ -46,7 +46,7 @@ export function Features() {
 
         {/* Fantasy Landscape with App Demo Overlay */}
         <div className="flex justify-center mb-12">
-          <div className="relative rounded-xl overflow-hidden w-full">
+          <div className="relative rounded-xl overflow-hidden w-full max-h-[600px]">
             <img
               src="/fantasy-landscape.svg"
               alt="Fantasy Landscape"
