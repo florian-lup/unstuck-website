@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { MessageSquare, Hammer, BookOpen, Scroll, Wrench } from "lucide-react";
+import { UnstuckApp } from "./unstuck-app";
 
 const features = [
   {
@@ -31,16 +32,32 @@ const features = [
 
 export function Features() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div className="mx-auto max-w-6xl">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-15 pt-32 pb-16 md:pt-40 md:pb-24">
+      <div className="mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+        <div className="text-left mb-12">
+          <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
             Powerful Features for Every Gamer
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
             From casual to competitive, Unstuck adapts to your needs with specialized AI modes
           </p>
+        </div>
+
+        {/* Fantasy Landscape with App Demo Overlay */}
+        <div className="flex justify-center mb-12">
+          <div className="relative rounded-xl overflow-hidden w-full">
+            <img
+              src="/fantasy-landscape.svg"
+              alt="Fantasy Landscape"
+              className="w-full h-auto"
+            />
+            
+            {/* App Demo Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center p-4">
+              <UnstuckApp />
+            </div>
+          </div>
         </div>
 
         {/* Features Grid */}
