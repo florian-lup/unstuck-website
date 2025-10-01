@@ -1,7 +1,7 @@
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { UnstuckApp } from "../app/unstuck-app";
+import { UnstuckApp } from "../app/unstuck-demo";
 
 const features = [
   {
@@ -18,7 +18,7 @@ const features = [
   },
 ];
 
-export function Features() {
+export function OverlayFeatures() {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-20 pt-32 pb-16 md:py-16">
       <div className="mx-auto">

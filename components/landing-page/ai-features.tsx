@@ -28,7 +28,7 @@ const benefits = [
   },
 ];
 
-export function Benefits() {
+export function AiFeatures() {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16 md:py-16">
       <div className="mx-auto">
