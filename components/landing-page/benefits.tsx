@@ -44,24 +44,35 @@ export function Benefits() {
           </div>
 
           {/* Benefits Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 md:auto-rows-fr">
-            {benefits.map((benefit, index) => {
-              return (
-                <Card key={index} className={`${benefit.className} bg-background`}>
-                  <CardContent className="p-8 h-full flex flex-col justify-between">
-                    <div className="space-y-4">
-                      <Badge variant="default" className="text-sm font-medium">
-                        {benefit.badge}
-                      </Badge>
-                      <div>
-                        <h3 className="font-semibold text-xl mb-3">{benefit.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+          <div className="relative overflow-hidden rounded-xl">
+            <div 
+              className="absolute inset-0 opacity-50 pointer-events-none rounded-xl"
+              style={{
+                backgroundImage: "url('/grid-background.svg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+              }}
+            />
+            <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 md:auto-rows-fr relative z-10">
+              {benefits.map((benefit, index) => {
+                return (
+                  <Card key={index} className={`${benefit.className} bg-background/70`}>
+                    <CardContent className="p-8 h-full flex flex-col justify-between">
+                      <div className="space-y-4">
+                        <Badge variant="default" className="text-sm font-medium">
+                          {benefit.badge}
+                        </Badge>
+                        <div>
+                          <h3 className="font-semibold text-xl mb-3">{benefit.title}</h3>
+                          <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
