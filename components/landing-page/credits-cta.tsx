@@ -4,12 +4,12 @@ import { Download } from "lucide-react";
 export function CreditsCTA() {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16 md:py-24">
-      <div className="max-w-5xl text-left">
+      <div className="max-w-4xl text-left">
         {/* Credits Card */}
         <div className="text-left">
             {/* Heading */}
             <div className="border-b border-primary">
-              <h2 className="text-2xl font-semibold md:text-5xl mb-6 text-gradient">
+              <h2 className="text-2xl font-semibold md:text-4xl mb-6 text-gradient">
                 Duct-taped together by sleep-deprived speedrunners for the trash gaming community
               </h2>
             </div>
