@@ -31,7 +31,7 @@ export function OverlayFeatures() {
             You can&apos;t install skill, but we can patch it
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
-            From casual to competitive, Unstuck adapts to your needs with specialized AI modes
+            The transparent in-game copilot—ask mid-fight, get fast answers, no alt-tab.
           </p>
         </div>
 
