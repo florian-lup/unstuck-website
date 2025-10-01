@@ -45,7 +45,7 @@ export function Benefits() {
           {/* Benefits Bento Grid */}
           <div className="relative overflow-hidden rounded-xl">
             <div 
-              className="absolute inset-0 opacity-50 pointer-events-none rounded-xl"
+              className="absolute inset-0 opacity-50 pointer-events-none rounded-xl transition-opacity duration-300 ease-in-out"
               style={{
                 backgroundImage: "url('/grid-background.svg')",
                 backgroundSize: "cover",

@@ -34,6 +34,21 @@ export default function RootLayout({
           type="font/ttf"
           crossOrigin=""
         />
+        {/* Preload critical assets to prevent loading delays */}
+        <link
+          rel="preload"
+          href="/fantasy-landscape.svg"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/grid-background.svg"
+          as="image"
+        />
+        <link
+          rel="prefetch"
+          href="/unstuck-demo.mp4"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider

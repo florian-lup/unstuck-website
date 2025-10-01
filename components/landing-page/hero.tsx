@@ -32,6 +32,7 @@ export function Hero() {
           muted
           loop
           playsInline
+          preload="metadata"
           disablePictureInPicture
           controlsList="nodownload nofullscreen noremoteplayback"
         >

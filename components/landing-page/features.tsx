@@ -2,7 +2,6 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { UnstuckApp } from "../app/unstuck-app";
-import Image from "next/image";
 
 const features = [
   {
@@ -38,20 +37,17 @@ export function Features() {
 
         {/* Fantasy Landscape with App Demo Overlay */}
         <div className="flex justify-center mb-12">
-          <div className="relative rounded-xl overflow-hidden w-full max-h-[600px]">
-            <Image
-              src="/fantasy-landscape.svg"
-              alt="Fantasy Landscape"
-              className="w-full h-auto"
-              width={1200}
-              height={600}
-              priority
-            />
-            
-            {/* App Demo Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center p-4">
-              <UnstuckApp />
-            </div>
+          <div 
+            className="relative rounded-xl overflow-hidden w-full bg-cover bg-center flex items-center justify-center p-4 transition-opacity duration-300 ease-in-out"
+            style={{ 
+              backgroundImage: "url('/fantasy-landscape.svg')", 
+              minHeight: '600px',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center'
+            }}
+          >
+            <UnstuckApp />
           </div>
         </div>
 
