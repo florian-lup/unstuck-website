@@ -70,7 +70,7 @@ export function Pricing() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-            Don't be the reason for the surrender vote
+            Don&apos;t be the reason for the surrender vote
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Start free and upgrade when you&apos;re ready to help maintain our spaghetti code

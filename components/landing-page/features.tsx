@@ -2,6 +2,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { UnstuckApp } from "../app/unstuck-app";
+import Image from "next/image";
 
 const features = [
   {
@@ -28,7 +29,7 @@ export function Features() {
             Playground
           </Badge>
           <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
-            You can't install skill, but we can patch it
+            You can&apos;t install skill, but we can patch it
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
             From casual to competitive, Unstuck adapts to your needs with specialized AI modes
@@ -38,10 +39,13 @@ export function Features() {
         {/* Fantasy Landscape with App Demo Overlay */}
         <div className="flex justify-center mb-12">
           <div className="relative rounded-xl overflow-hidden w-full max-h-[600px]">
-            <img
+            <Image
               src="/fantasy-landscape.svg"
               alt="Fantasy Landscape"
               className="w-full h-auto"
+              width={1200}
+              height={600}
+              priority
             />
             
             {/* App Demo Overlay */}
