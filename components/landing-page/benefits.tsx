@@ -30,11 +30,10 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section className="py-16 md:py-16 lg:px-20">
-      <div className="container mx-auto">
-        <div className="mx-auto max-w-6xl">
-          {/* Section Header */}
-          <div className="text-left mb-12">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16 md:py-16">
+      <div className="mx-auto">
+        {/* Section Header */}
+        <div className="text-left mb-12">
             <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
               Tryhard results. Zero tryharding.
             </h2>
@@ -57,7 +56,7 @@ export function Benefits() {
             <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 md:auto-rows-fr relative z-10">
               {benefits.map((benefit, index) => {
                 return (
-                  <Card key={index} className={`${benefit.className} bg-background/70`}>
+                  <Card key={index} className={`${benefit.className} bg-background/50 `}>
                     <CardContent className="p-8 h-full flex flex-col justify-between">
                       <div className="space-y-4">
                         <Badge variant="default" className="text-sm font-medium">
@@ -75,7 +74,6 @@ export function Benefits() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }

@@ -65,8 +65,8 @@ export function Pricing() {
   };
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-16">
-      <div className="mx-auto max-w-5xl">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16 md:py-16">
+      <div className="mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
@@ -78,7 +78,7 @@ export function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <Card 
               key={index} 
