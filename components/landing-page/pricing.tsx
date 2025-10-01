@@ -11,7 +11,7 @@ const plans = [
     price: "$0",
     description: "For those who insist on using a browser 🤷",
     badge: "Why though?",
-    badgeVariant: "default" as const,
+    badgeVariant: "secondary" as const,
     features: [
       "Alt-tab out of your game constantly",
       "Miss crucial moments while typing",
@@ -27,7 +27,7 @@ const plans = [
     name: "Free",
     price: "$0",
     description: "Perfect for casual gamers getting started",
-    badge: null,
+    badge: "Popular",
     badgeVariant: "default" as const,
     features: [
       "50 AI queries per day",
@@ -82,7 +82,7 @@ export function Pricing() {
           {plans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`relative ${plan.badge ? 'border-2 border-primary' : ''}`}
+              className={`relative ${plan.badge && plan.name !== "Loser" ? 'border-2 border-primary' : ''}`}
             >
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">

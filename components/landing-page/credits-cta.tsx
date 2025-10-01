@@ -4,9 +4,9 @@ import { Download } from "lucide-react";
 export function CreditsCTA() {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16 md:py-24">
-      <div className="mx-auto w-full rounded-2xl">
+      <div className="mx-auto py-30">
         {/* Credits Card */}
-          <div className="text-left">
+        <div className="text-left">
             {/* Heading */}
             <div>
               <h2 className="text-2xl font-semibold md:text-5xl mb-6 text-gradient">
