@@ -9,12 +9,12 @@ export function Header() {
         {/* Logo and Brand */}
         <div className="flex items-center gap-3">
           <Image
-            src="/unstuck-logo.svg"
+            src="/unstuck-logo-eye.svg"
             alt="Unstuck Logo"
-            width={25}
-            height={25}
+            width={35}
+            height={35}
           />
-          <span className="text-xl font-bold tracking-tight">Unstuck</span>
+          <span className="text-lg font-bold font-mokoto">Unstuck</span>
         </div>
 
         {/* Actions */}
