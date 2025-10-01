@@ -18,7 +18,7 @@ export default function Home() {
         <CreditsCTA />
       </main>
 
-      <footer className="border-t py-12 bg-muted/30">
+      <footer className="border-t py-4 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
