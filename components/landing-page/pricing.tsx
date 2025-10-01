@@ -11,6 +11,7 @@ const plans = [
     price: "$0",
     description: "For those who insist on using a browser 🤷",
     badge: "Why though?",
+    badgeVariant: "default" as const,
     features: [
       "Alt-tab out of your game constantly",
       "Miss crucial moments while typing",
@@ -27,6 +28,7 @@ const plans = [
     price: "$0",
     description: "Perfect for casual gamers getting started",
     badge: null,
+    badgeVariant: "default" as const,
     features: [
       "50 AI queries per day",
       "Basic chat mode",
@@ -41,7 +43,8 @@ const plans = [
     name: "Pro",
     price: "$9.99",
     description: "Unlimited power for serious gamers",
-    badge: "Popular",
+    badge: null,
+    badgeVariant: "default" as const,
     features: [
       "Unlimited AI queries",
       "All advanced modes (builds, guides, lore, troubleshooting)",
@@ -62,7 +65,7 @@ export function Pricing() {
   };
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-16">
       <div className="mx-auto max-w-5xl">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -83,7 +86,7 @@ export function Pricing() {
             >
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <Badge variant="default">{plan.badge}</Badge>
+                  <Badge variant={plan.badgeVariant}>{plan.badge}</Badge>
                 </div>
               )}
               
