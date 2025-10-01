@@ -9,21 +9,21 @@ const benefits = [
     className: "md:col-span-2 md:row-span-1",
   },
   {
-    badge: "Builds",
-    title: "Build Guides",
-    description: "Get optimal character builds, skill trees, and equipment recommendations instantly.",
+    badge: "Context",
+    title: "Always up to date",
+    description: "Searches multiple sources on the web for the most up to date information on your game.",
     className: "md:col-span-1 md:row-span-1",
   },
   {
     badge: "Support",
-    title: "Troubleshooting",
-    description: "Quick solutions for bugs, technical issues, and game configuration problems.",
+    title: "Multilingual Support",
+    description: "Chat in your preferred language with support for 50+ languages.",
     className: "md:col-span-1 md:row-span-1",
   },
   {
-    badge: "Global",
-    title: "Multilingual Support",
-    description: "Chat in your preferred language with support for 50+ languages.",
+    badge: "Modes",
+    title: "Chat Enhancements",
+    description: "Optimized for the chat to get optimal character builds, skill trees, and equipment recommendations instantly.",
     className: "md:col-span-2 md:row-span-1",
   },
 ];
@@ -38,7 +38,7 @@ export function AiFeatures() {
               Tryhard results. Zero tryharding.
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
-              Built by gamers, for gamers. Every feature designed to enhance your experience
+              Smarter chat, always‑fresh info, and multilingual support—tuned for gamers, not spreadsheets.
             </p>
           </div>
 

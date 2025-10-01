@@ -8,7 +8,7 @@ export function CreditsCTA() {
         {/* Credits Card */}
         <div className="text-left">
             {/* Heading */}
-            <div>
+            <div className="border-b border-primary">
               <h2 className="text-2xl font-semibold md:text-5xl mb-6 text-gradient">
                 Duct-taped together by sleep-deprived speedrunners for the trash gaming community
               </h2>
@@ -16,8 +16,8 @@ export function CreditsCTA() {
 
             {/* CTA Button and Info */}
             <div className="flex items-center gap-4 pt-4">
-              <Button size="lg" className="gap-2 text-lg">
-                <Download className="size-6" />
+              <Button size="sm" className="gap-2 text-sm">
+                <Download className="size-4" />
                 Download Unstuck
               </Button>
               
