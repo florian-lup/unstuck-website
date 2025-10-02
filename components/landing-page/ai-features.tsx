@@ -21,7 +21,7 @@ const benefits = [
     className: "md:col-span-2 md:row-span-1",
   },
   {
-    badge: "Modes",
+    badge: "Agents",
     title: "Chat Enhancements",
     description: "Optimized for the chat to get optimal character builds, skill trees, and equipment recommendations instantly.",
     className: "md:col-span-3 md:row-span-1",
