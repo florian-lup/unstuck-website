@@ -33,6 +33,10 @@ export function UnstuckApp() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [userQuery, setUserQuery] = useState("");
+  const [submittedQuery, setSubmittedQuery] = useState("demo");
+  const [showResponse, setShowResponse] = useState(false);
+  const [trashTalkMessage, setTrashTalkMessage] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
   const componentRef = useRef<HTMLDivElement>(null);
 
@@ -110,6 +114,45 @@ export function UnstuckApp() {
   const handleDragStart = (e: React.MouseEvent) => {
     setIsDragging(true);
     setDragStart({ x: e.clientX, y: e.clientY });
+  };
+
+  const handleSubmitQuery = () => {
+    if (userQuery.trim()) {
+      setSubmittedQuery(userQuery);
+      setTrashTalkMessage(getRandomTrashTalk());
+      setShowResponse(true);
+      setUserQuery("");
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSubmitQuery();
+    }
+  };
+
+  const handleClearQuery = () => {
+    setUserQuery("");
+  };
+
+  const handleNewChat = () => {
+    setShowResponse(false);
+    setSubmittedQuery("");
+    setTrashTalkMessage("");
+    setUserQuery("");
+    setActiveTab(null);
+  };
+
+  const trashTalkMessages = [
+    "Nice try, but this is just a demo. The real magic happens when you download the actual app, noob.",
+    "LOL, you really thought this was live? Download the app to stop embarrassing yourself.",
+    "Imagine trying to use a demo as the real thing. Download Unstuck and level up your gameplay.",
+    "This ain't it, chief. Download the app to get actual answers instead of this roast.",
+    "You're basically asking a cardboard cutout for help. Get the real app, it'll change your life.",
+  ];
+
+  const getRandomTrashTalk = () => {
+    return trashTalkMessages[Math.floor(Math.random() * trashTalkMessages.length)];
   };
 
   return (
@@ -275,6 +318,7 @@ export function UnstuckApp() {
         <Button 
           variant="ghost" 
           size="sm"
+          onClick={handleNewChat}
           className="gap-1.5 text-gray-300 hover:text-white"
           style={{ backgroundColor: 'transparent' }}>
           <RotateCcw className="size-4" />
@@ -289,61 +333,115 @@ export function UnstuckApp() {
              scrollbarWidth: 'none',
              msOverflowStyle: 'none'
            } as React.CSSProperties & { msOverflowStyle?: string }}>
-        {/* Query Display */}
-        <div className="mb-4 px-4 py-2 rounded-md">
-          <p className="text-gray-300 text-sm">
-            stormbringer shaman elemental m+ stat priority
-          </p>
-        </div>
-
-        {/* Divider */}
-        <div className="h-px" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
-
-        {/* Response Card */}
-        <Card 
-          className="border-0 shadow-none gap-4 rounded-lg"
-          style={{ backgroundColor: 'transparent' }}>
-          <div className="px-6">
-            <div className="space-y-4">
-              <div>
-                <p className="text-gray-200 text-sm mb-3">
-                  For <span className="font-semibold text-white">Stormbringer Elemental Shaman</span> in <span className="font-semibold text-white">Mythic+ (WoW 11.2)</span>, the <span className="font-semibold text-white">stat priority</span> is:
-                </p>
-              </div>
-              
-              <div className="space-y-2">
-                <div className="flex items-start gap-2">
-                  <span className="text-gray-400 text-sm">1.</span>
-                  <span className="text-white font-medium text-sm">Mastery</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-gray-400 text-sm">2.</span>
-                  <span className="text-white font-medium text-sm">Haste</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-gray-400 text-sm">3.</span>
-                  <span className="text-white font-medium text-sm">Critical Strike</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-gray-400 text-sm">4.</span>
-                  <span className="text-white font-medium text-sm">Versatility</span>
-                </div>
-              </div>
-
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Mastery is the most valuable secondary stat because it significantly boosts your elemental damage output. Haste follows, improving your cast speed and resource generation. Critical Strike is next, favored especially for AoE and Stormbringer synergy, and Versatility is last but still useful for overall damage and survivability.
-              </p>
-
-              <p className="text-gray-300 text-sm leading-relaxed">
-                This priority differs from Enhancment Stormbringer, which prioritizes Haste first, then Mastery, Critical Strike, and Versatility.
-              </p>
-
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Additional minor stats like Avoidance and Leech have some value but are secondary to the main four.
+        
+        {showResponse ? (
+          <>
+            {/* User Query Display */}
+            <div className="mb-4 px-4 py-2 rounded-md">
+              <p className="text-gray-300 text-sm">
+                {submittedQuery}
               </p>
             </div>
-          </div>
-        </Card>
+
+            {/* Divider */}
+            <div className="h-px mb-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+
+            {/* Trash Talk Response Card */}
+            <Card 
+              className="border-0 shadow-none gap-4 rounded-lg"
+              style={{ backgroundColor: 'transparent' }}>
+              <div className="px-6">
+                <div className="space-y-6">
+                  <p className="text-gray-200 text-base leading-relaxed">
+                    {trashTalkMessage}
+                  </p>
+
+                  <div className="flex justify-start pt-2">
+                    <Button 
+                      size="lg"
+                      className="gap-2 text-white font-semibold px-6 py-5 rounded-full border border-white/20 hover:!bg-white/10"
+                      style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                      </svg>
+                      Download Unstuck
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </>
+        ) : submittedQuery === "" ? (
+          <>
+            {/* Empty State - New Chat */}
+            <div className="flex items-center justify-center h-full">
+              <div className="text-center space-y-3">
+                <p className="text-gray-400 text-sm">Start a new conversation</p>
+                <p className="text-gray-500 text-xs">Ask anything about {selectedGame}</p>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* Default Demo Content */}
+            <div className="mb-4 px-4 py-2 rounded-md">
+              <p className="text-gray-300 text-sm">
+                stormbringer shaman elemental m+ stat priority
+              </p>
+            </div>
+
+            {/* Divider */}
+            <div className="h-px" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+
+            {/* Response Card */}
+            <Card 
+              className="border-0 shadow-none gap-4 rounded-lg"
+              style={{ backgroundColor: 'transparent' }}>
+              <div className="px-6">
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-gray-200 text-sm mb-3">
+                      For <span className="font-semibold text-white">Stormbringer Elemental Shaman</span> in <span className="font-semibold text-white">Mythic+ (WoW 11.2)</span>, the <span className="font-semibold text-white">stat priority</span> is:
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2">
+                      <span className="text-gray-400 text-sm">1.</span>
+                      <span className="text-white font-medium text-sm">Mastery</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-gray-400 text-sm">2.</span>
+                      <span className="text-white font-medium text-sm">Haste</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-gray-400 text-sm">3.</span>
+                      <span className="text-white font-medium text-sm">Critical Strike</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-gray-400 text-sm">4.</span>
+                      <span className="text-white font-medium text-sm">Versatility</span>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Mastery is the most valuable secondary stat because it significantly boosts your elemental damage output. Haste follows, improving your cast speed and resource generation. Critical Strike is next, favored especially for AoE and Stormbringer synergy, and Versatility is last but still useful for overall damage and survivability.
+                  </p>
+
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    This priority differs from Enhancment Stormbringer, which prioritizes Haste first, then Mastery, Critical Strike, and Versatility.
+                  </p>
+
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Additional minor stats like Avoidance and Leech have some value but are secondary to the main four.
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </>
+        )}
       </div>
 
       {/* Bottom Input Area */}
@@ -352,6 +450,9 @@ export function UnstuckApp() {
         <div className="relative flex items-center gap-2">
           <Input 
             placeholder="Ask about your game..."
+            value={userQuery}
+            onChange={(e) => setUserQuery(e.target.value)}
+            onKeyPress={handleKeyPress}
             className="pr-20 border-0 text-white placeholder:text-gray-300 rounded-full bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
             style={{ 
               backgroundColor: 'transparent',
@@ -363,12 +464,15 @@ export function UnstuckApp() {
             <Button 
               size="icon"
               variant="ghost"
-              className="size-7 rounded-full text-gray-400 hover:!bg-white/10 hover:text-white bg-transparent">
+              onClick={handleSubmitQuery}
+              disabled={!userQuery.trim()}
+              className="size-7 rounded-full text-gray-400 hover:!bg-white/10 hover:text-white bg-transparent disabled:opacity-30">
               <CornerDownLeft className="size-4" />
             </Button>
             <Button 
               size="icon"
               variant="ghost"
+              onClick={handleClearQuery}
               className="size-7 rounded-full text-gray-400 hover:!bg-white/10 hover:text-white bg-transparent">
               <X className="size-4" />
             </Button>
