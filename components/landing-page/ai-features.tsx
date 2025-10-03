@@ -6,25 +6,19 @@ const benefits = [
     badge: "AI Chat",
     title: "Smart Chat",
     description: "Natural conversations with AI that understands your game context and questions.",
-    className: "md:col-span-3 md:row-span-1",
+    className: "md:col-span-1",
   },
   {
     badge: "Context",
     title: "Always up to date",
     description: "Searches multiple sources on the web for the most up to date information on your game.",
-    className: "md:col-span-2 md:row-span-1",
+    className: "md:col-span-1",
   },
   {
     badge: "Support",
     title: "Multilingual Support",
     description: "Chat in your preferred language with support for 50+ languages.",
-    className: "md:col-span-2 md:row-span-1",
-  },
-  {
-    badge: "Agents",
-    title: "Chat Enhancements",
-    description: "Optimized for the chat to get optimal character builds, skill trees, and equipment recommendations instantly.",
-    className: "md:col-span-3 md:row-span-1",
+    className: "md:col-span-1",
   },
 ];
 
@@ -43,21 +37,24 @@ export function AiFeatures() {
           </div>
 
           {/* Benefits Bento Grid */}
-          <div className="relative overflow-hidden rounded-xl">
-            <div 
-              className="absolute inset-0 opacity-50 pointer-events-none rounded-xl transition-opacity duration-300 ease-in-out"
-              style={{
-                backgroundImage: "url('/grid-background.svg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat"
-              }}
-            />
-            <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-6 md:auto-rows-fr relative z-10">
+          <div className="relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => {
                 return (
-                  <Card key={index} className={`${benefit.className} bg-background/50 `}>
-                    <CardContent className="p-8 h-full flex flex-col justify-between">
+                  <Card 
+                    key={index} 
+                    className={`${benefit.className} bg-background/50 relative overflow-hidden`}
+                  >
+                    <div 
+                      className="absolute inset-0 opacity-20 pointer-events-none"
+                      style={{
+                        backgroundImage: "url('/grid-background.svg')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat"
+                      }}
+                    />
+                    <CardContent className="p-8 h-full flex flex-col justify-between relative z-10">
                       <div className="space-y-4">
                         <Badge variant="default" className="text-sm font-medium">
                           {benefit.badge}
