@@ -1,4 +1,16 @@
+"use client";
+
+import { useState } from "react";
+
 export function Footer() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("contact@unstuck.gg");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 3000);
+  };
+
   return (
     <footer className="border-t py-4 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -7,9 +19,14 @@ export function Footer() {
             © 2025 Unstuck. All rights reserved.
           </div>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
+            <button
+              onClick={handleCopyEmail}
+              className={`transition-colors ${
+                copied ? "text-success" : "hover:text-foreground"
+              }`}
+            >
+              {copied ? "Email copied!" : "Contact"}
+            </button>
           </div>
         </div>
       </div>
