@@ -5,19 +5,19 @@ const benefits = [
   {
     badge: "AI Chat",
     title: "Smart Chat",
-    description: "Natural conversations with AI that understands your game context and questions.",
+    description: "Natural conversations with AI that understands your game context and questions. It's like having a pro player in your ear, except this one won't judge you for asking what DPS means.",
     className: "md:col-span-1",
   },
   {
     badge: "Context",
     title: "Always up to date",
-    description: "Searches multiple sources on the web for the most up to date information on your game.",
+    description: "Searches multiple sources on the web for the most up to date information on your game. Because that Reddit post from 2019 you're still following? Yeah, that got nerfed three patches ago.",
     className: "md:col-span-1",
   },
   {
     badge: "Support",
     title: "Multilingual Support",
-    description: "Chat in your preferred language with support for 50+ languages.",
+    description: "Chat in your preferred language with support for 50+ languages. No more blaming your rank on 'language barrier' when you queue with randoms.",
     className: "md:col-span-1",
   },
 ];
@@ -32,7 +32,7 @@ export function AiFeatures() {
               Tryhard results. Zero tryharding.
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
-              Boosting you harder than your best friends ever did.
+              Boosting you harder than your best friends ever did. Get carried by AI so good, people will think you finally touched grass and learned to play. Spoiler: you didn&apos;t.
             </p>
           </div>
 

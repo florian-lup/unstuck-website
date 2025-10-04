@@ -6,15 +6,15 @@ import { UnstuckApp } from "../app/unstuck-demo";
 const features = [
   {
     title: "Lightning Fast",
-    description: "Get instant, concise answers without interrupting your gameplay flow.",
+    description: "Get instant, concise answers without interrupting your gameplay flow. No more dying while you Google basic mechanics like a noob. Your teammates won't even know you needed help.",
   },
   {
     title: "Performance Optimized",
-    description: "Minimal RAM and CPU usage ensures smooth gaming with no frame drops.",
+    description: "Minimal RAM and CPU usage ensures smooth gaming with no frame drops. Unlike your browser with 47 tabs open, this actually runs efficiently. No excuses for playing badly anymore.",
   },
   {
     title: "No Alt-Tabbing Required",
-    description: "Stay in the game and use the transparent overlay while playing without losing focus.",
+    description: "Stay in the game and use the transparent overlay while playing without losing focus. Stop pretending you 'lagged out' when you were really reading a wiki. We know what you were doing.",
   },
 ];
 
@@ -28,10 +28,10 @@ export function OverlayFeatures() {
             Playground
           </Badge>
           <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
-            You can&apos;t install skill, but we can patch it
+            You can&apos;t install skill, but we can patch what you already have
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
-            The transparent in-game copilot—ask mid-fight, get fast answers, no alt-tab.
+          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-4xl">
+            The transparent in-game copilot—ask mid-fight, get fast answers, no alt-tab. Stop getting clapped because you forgot the boss rotation. Git gud, but let AI do the heavy lifting while you focus on not embarrassing yourself.
           </p>
         </div>
 
