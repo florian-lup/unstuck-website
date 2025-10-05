@@ -249,14 +249,14 @@ export function AiFeatures() {
           <div className="relative">
             <div className="flex flex-col md:flex-row gap-6">
               {/* Left side - stacked features */}
-              <div className="w-full md:w-1/2 flex flex-col gap-6 border rounded-lg p-2">
+              <div className="w-full md:w-1/2 flex flex-col gap-6 p-2">
                 {benefits.map((benefit, index) => {
                   return (
                     <Card 
                       key={index} 
                       className="bg-background/50 relative overflow-hidden border-0"
                     >
-                      <CardContent className="h-full flex flex-col justify-between">
+                      <CardContent className="h-full flex flex-col justify-between border-l">
                         <div className="space-y-4">
                           <div className="flex items-center justify-between">
                             <h3 className="font-semibold text-xl">{benefit.title}</h3>
@@ -274,15 +274,15 @@ export function AiFeatures() {
               
               {/* Right side - chat message area */}
               <div className="w-full md:w-1/2 bg-background/50 rounded-lg border relative overflow-hidden">
-                <div 
-                  className="absolute inset-0 opacity-50 pointer-events-none"
-                  style={{
-                    backgroundImage: "url('/grid-background.svg')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat"
-                  }}
-                />
+                <video 
+                  className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/enchanted-room.mp4" type="video/mp4" />
+                </video>
                 {/* Chat content area */}
                 <div className="relative z-10 p-8 h-full overflow-y-auto"
                      style={{ 

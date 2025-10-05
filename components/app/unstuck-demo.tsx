@@ -200,7 +200,7 @@ export function UnstuckApp() {
             )}
           </div>
           
-          {/* Speak Button */}
+          {/* Voice Button */}
           <Tooltip>
             <TooltipTrigger asChild onClick={(e) => e.preventDefault()}>
               <div className="inline-block">
@@ -211,7 +211,7 @@ export function UnstuckApp() {
                   onPressedChange={setIsSpeaking}
                   className="gap-1.5 text-gray-300 hover:!bg-white/10 hover:text-white data-[state=on]:!bg-red-500/20 rounded-full px-3 bg-transparent [&[data-state=on]>svg]:text-red-400 [&[data-state=on]>span]:text-white">
                   <Mic className="size-4" />
-                  <span className="text-sm">Speak</span>
+                  <span className="text-sm">Voice</span>
                 </Toggle>
               </div>
             </TooltipTrigger>
