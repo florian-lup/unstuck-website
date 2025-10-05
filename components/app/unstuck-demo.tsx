@@ -388,54 +388,86 @@ export function UnstuckApp() {
             {/* Default Demo Content */}
             <div className="mb-4 px-4 py-2 rounded-md">
               <p className="text-gray-300 text-sm">
-                stormbringer shaman elemental m+ stat priority
+                How to defeat Dimensius on heroic?
               </p>
             </div>
 
             {/* Divider */}
-            <div className="h-px" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+            <div className="h-px mb-2" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
 
             {/* Response Card */}
             <Card 
-              className="border-0 shadow-none gap-4 rounded-lg"
+              className="border-0 shadow-none gap-4 rounded-lg py-4"
               style={{ backgroundColor: 'transparent' }}>
               <div className="px-6">
                 <div className="space-y-4">
+                  <p className="text-gray-200 text-sm leading-relaxed">
+                    To defeat <span className="font-semibold text-white">Dimensius the All-Devouring</span> on Heroic in <span className="font-semibold text-white">World of Warcraft 11.2</span> (Manaforge Omega raid), you must master a multi-phase encounter with unique mechanics focused on positioning, add control, and survival during Devour phases.
+                  </p>
+
                   <div>
-                    <p className="text-gray-200 text-sm mb-3">
-                      For <span className="font-semibold text-white">Stormbringer Elemental Shaman</span> in <span className="font-semibold text-white">Mythic+ (WoW 11.2)</span>, the <span className="font-semibold text-white">stat priority</span> is:
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <div className="flex items-start gap-2">
-                      <span className="text-gray-400 text-sm">1.</span>
-                      <span className="text-white font-medium text-sm">Mastery</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-gray-400 text-sm">2.</span>
-                      <span className="text-white font-medium text-sm">Haste</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-gray-400 text-sm">3.</span>
-                      <span className="text-white font-medium text-sm">Critical Strike</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-gray-400 text-sm">4.</span>
-                      <span className="text-white font-medium text-sm">Versatility</span>
-                    </div>
+                    <p className="text-white font-semibold text-sm mb-2">Overview:</p>
+                    <ul className="space-y-2 text-gray-300 text-sm list-disc list-inside">
+                      <li>The fight has several phases, each with distinct mechanics.</li>
+                      <li>Success depends on precise raid movement, add management, and using the environment to survive lethal boss abilities.</li>
+                    </ul>
                   </div>
 
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    Mastery is the most valuable secondary stat because it significantly boosts your elemental damage output. Haste follows, improving your cast speed and resource generation. Critical Strike is next, favored especially for AoE and Stormbringer synergy, and Versatility is last but still useful for overall damage and survivability.
-                  </p>
+                  <div>
+                    <p className="text-white font-semibold text-sm mb-2">Key Points:</p>
+                    
+                    <div className="space-y-3">
+                      <div>
+                        <p className="text-white font-medium text-sm mb-1">Phase 1: Split and Add Control</p>
+                        <ul className="space-y-1 text-gray-300 text-sm list-disc list-inside ml-2">
+                          <li>Split the raid into two balanced groups (left/right), each taking a portal at the pull.</li>
+                          <li>Kill Living Mass adds quickly; assigned players pick up Excess Mass orbs dropped by these adds.</li>
+                          <li>Orb carriers must meet in the center to combine debuffs and drop a protective puddle, which prevents the raid from being inhaled by Dimensius.</li>
+                          <li>Afterward, avoid the tank smash knockback by positioning to the sides—never behind the boss or near the edge.</li>
+                          <li>Handle group soak mechanics and use healing cooldowns as needed.</li>
+                        </ul>
+                      </div>
 
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    This priority differs from Enhancment Stormbringer, which prioritizes Haste first, then Mastery, Critical Strike, and Versatility.
-                  </p>
+                      <div>
+                        <p className="text-white font-medium text-sm mb-1">Platform Transition:</p>
+                        <ul className="space-y-1 text-gray-300 text-sm list-disc list-inside ml-2">
+                          <li>After killing the adds and handling mechanics, you&apos;ll transition to the next platform, often via a dragonriding intermission.</li>
+                        </ul>
+                      </div>
 
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    Additional minor stats like Avoidance and Leech have some value but are secondary to the main four.
+                      <div>
+                        <p className="text-white font-medium text-sm mb-1">Phase 2: Add Priority and Cleave</p>
+                        <ul className="space-y-1 text-gray-300 text-sm list-disc list-inside ml-2">
+                          <li>On each new platform, prioritize killing Void Wardens and Nullbinders. Nullbinders cast a stacking DoT and slow; use Death Knight grips or similar abilities to group them for efficient cleave.</li>
+                          <li>You&apos;re on a timer: if you don&apos;t kill the adds before Dimensius cycles abilities twice, the mini-boss enrages and wipes the raid.</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <p className="text-white font-medium text-sm mb-1">Final Phase (Singularity):</p>
+                        <ul className="space-y-1 text-gray-300 text-sm list-disc list-inside ml-2">
+                          <li>Upon reaching the last platform, use Heroism/Bloodlust immediately for burst damage while the boss is stunned and takes double damage.</li>
+                          <li>Dimensius will summon 8 stars that orbit him. At 100 energy, he casts Devour—everyone must hide inside a star to survive.</li>
+                          <li>Each Devour pulls the outer ring closer to the boss, shrinking the safe area. After the third Devour, the ring covers the platform and the raid dies.</li>
+                          <li>Avoid touching the boss&apos;s hitbox (instant death) and dodge falling stars, which deal heavy damage.</li>
+                          <li>After each Devour, the star used becomes a black hole—avoid it for the rest of the fight.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-white font-semibold text-sm mb-2">Specific Details:</p>
+                    <ul className="space-y-2 text-gray-300 text-sm list-disc list-inside">
+                      <li>Assign players to handle Excess Mass and group soaks in Phase 1.</li>
+                      <li>Use movement abilities to avoid knockbacks and reposition quickly, especially during pushbacks and ring mechanics.</li>
+                      <li>Healers should prioritize instant-cast spells and defensives during high-movement phases.</li>
+                      <li>Tanks must manage boss positioning to avoid pulling the raid into dangerous zones.</li>
+                    </ul>
+                  </div>
+
+                  <p className="text-gray-300 text-sm leading-relaxed italic">
+                    Would you like tips for a specific class or role for this encounter?
                   </p>
                 </div>
               </div>

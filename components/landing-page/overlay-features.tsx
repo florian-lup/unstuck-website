@@ -31,7 +31,7 @@ export function OverlayFeatures() {
             Can&apos;t install skill? We can patch what you already have
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl">
-            You die so much, NPCs are sending condolences. Stop getting clapped because you forgot the boss rotation—ask mid-fight, get fast answers, no alt-tab to search 10 web pages.
+            One cooldown for all your problems. Stop getting clapped and start learning the boss mechanics—ask mid-fight, get fast answers, no alt-tabbing through 10 web pages.
           </p>
         </div>
 

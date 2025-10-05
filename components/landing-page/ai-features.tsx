@@ -201,7 +201,7 @@ export function AiFeatures() {
       if (currentIndex < currentConversation.userQuery.length) {
         setUserText(currentConversation.userQuery.substring(0, currentIndex + 1));
         currentIndex++;
-        typingTimeout = setTimeout(typeWriter, 50);
+        typingTimeout = setTimeout(typeWriter, 30);
       } else {
         // Show assistant message after typing is complete
         assistantTimeout = setTimeout(() => {
