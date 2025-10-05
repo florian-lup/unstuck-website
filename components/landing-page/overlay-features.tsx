@@ -28,10 +28,10 @@ export function OverlayFeatures() {
             Playground
           </Badge>
           <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
-            You can&apos;t install skill, but we can patch what you already have
+            Can&apos;t install skill? We can patch what you already have
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-4xl">
-            The transparent in-game copilot—ask mid-fight, get fast answers, no alt-tab. Stop getting clapped because you forgot the boss rotation. Git gud, but let AI do the heavy lifting while you focus on not embarrassing yourself.
+          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl">
+            You die so much, NPCs are sending condolences. Stop getting clapped because you forgot the boss rotation—ask mid-fight, get fast answers, no alt-tab to search 10 web pages.
           </p>
         </div>
 

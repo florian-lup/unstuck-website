@@ -29,10 +29,10 @@ export function AiFeatures() {
         {/* Section Header */}
         <div className="text-left mb-12">
             <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
-              Tryhard results. Zero tryharding.
+              Boosting you harder than your best friends ever did
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
-              Boosting you harder than your best friends ever did. Get carried by AI so good, people will think you finally touched grass and learned to play. Spoiler: you didn&apos;t.
+            <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl">
+              If excuses were damage, you&apos;d break records. Get carried by AI so good, people will think you finally touched grass and learned to play. Spoiler: you didn&apos;t.
             </p>
           </div>
 
