@@ -9,7 +9,7 @@ export function CreditsCTA() {
         <div className="text-left">
             {/* Heading */}
             <div className="border-b border-primary">
-              <h2 className="text-2xl font-semibold md:text-4xl mb-6 text-gradient">
+              <h2 className="text-2xl font-semibold md:text-4xl mb-5 text-gradient">
                 Duct-taped together by sleep-deprived speedrunners for the trash gaming community
               </h2>
             </div>
