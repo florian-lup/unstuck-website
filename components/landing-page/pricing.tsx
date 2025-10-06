@@ -1,9 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Download } from "lucide-react";
+import { Check } from "lucide-react";
 
 const plans = [
   {
@@ -20,8 +19,6 @@ const plans = [
       "Get wrecked while reading guides",
       "Your teammates judging you",
     ],
-    cta: "Stay Losing",
-    variant: "outline" as const,
   },
   {
     name: "Free",
@@ -36,8 +33,21 @@ const plans = [
       "All supported games",
       "Regular updates",
     ],
-    cta: "Get Started",
-    variant: "outline" as const,
+  },
+  {
+    name: "Community",
+    price: "$4.99",
+    description: "For engaged gamers who want more",
+    badge: "Best Value",
+    badgeVariant: "default" as const,
+    features: [
+      "200 AI queries per day",
+      "Advanced chat mode",
+      "Priority community support",
+      "All supported games",
+      "Beta feature access",
+      "Custom keybinds",
+    ],
   },
   {
     name: "Pro",
@@ -53,17 +63,10 @@ const plans = [
       "Custom overlay themes",
       "No ads",
     ],
-    cta: "Coming Soon",
-    variant: "default" as const,
   },
 ];
 
 export function Pricing() {
-  const handleLoserClick = () => {
-    // Open Google in a new window
-    window.open('https://www.google.com', '_blank');
-  };
-
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16 md:py-16">
       <div className="mx-auto">
@@ -78,7 +81,7 @@ export function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan, index) => (
             <Card 
               key={index} 
@@ -109,19 +112,6 @@ export function Pricing() {
                   ))}
                 </ul>
               </CardContent>
-
-              <CardFooter>
-                <Button 
-                  variant={plan.variant} 
-                  size="lg" 
-                  className="w-full"
-                  onClick={plan.name === "Loser" ? handleLoserClick : undefined}
-                  disabled={plan.name === "Pro"}
-                >
-                  {plan.name === "Free" && <Download className="mr-2 size-4" />}
-                  {plan.cta}
-                </Button>
-              </CardFooter>
             </Card>
           ))}
         </div>
