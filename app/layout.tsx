@@ -41,11 +41,6 @@ export default function RootLayout({
           as="image"
         />
         <link
-          rel="preload"
-          href="/grid-background.svg"
-          as="image"
-        />
-        <link
           rel="prefetch"
           href="/unstuck-demo.mp4"
         />
