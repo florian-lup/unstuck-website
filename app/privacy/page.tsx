@@ -186,45 +186,42 @@ export default function PrivacyPolicy() {
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Region-Specific Disclosures</h2>
           
-          <h3 className="text-xl font-semibold mt-6 mb-3">A Note to California Residents</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">UK Data Protection</h3>
           <p>
-            We currently do not share Personal Information with third parties for their direct marketing purposes, as contemplated by California Civil Code Section 1798.83, without your consent.
+            Unstuck is based in the United Kingdom. The Services are controlled and operated by us from the United Kingdom in accordance with UK data protection laws, including the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Your Personal Information may be stored and processed in any country where we have facilities or in which we engage service providers, and by using the Services you consent to the transfer of information to countries outside of the United Kingdom. Where we transfer Personal Information outside the UK, we will ensure appropriate safeguards are in place as required by UK data protection law.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">A Note to Nevada Residents</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">A Note to Users Outside the United Kingdom</h3>
           <p>
-            If you are a resident of Nevada, you have the right to opt-out of the sale of certain Personal Information to third parties who intend to license or sell that Personal Information. You can exercise this right by contacting us at contact@unstuck.gg with the subject line "Nevada Do Not Sell Request" and providing us with your name and the email address associated with your account. Please note that we do not currently sell your Personal Information as sales are defined in Nevada Revised Statutes Chapter 603A.
+            The Services are controlled and operated from the United Kingdom and are subject to UK laws and regulations. Your Personal Information may be stored and processed in the United Kingdom or in any country where we have facilities or engage service providers. By using the Services, you consent to the transfer of information to countries outside of your country of residence, which may have data protection rules that are different from those of your country. In certain circumstances, courts, law enforcement agencies, regulatory agencies or security authorities in the United Kingdom or other countries may be entitled to access your Personal Information.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">A Note to Users Outside the United States</h3>
-          <p>
-            Unstuck is based in the United States. The Services are controlled and operated by us from the United States and are not intended to subject us to the laws or jurisdiction of any state, country or territory other than that of the laws of the country(ies) where the Services are controlled. Your Personal Information may be stored and processed in any country where we have facilities or in which we engage service providers, and by using the Services you consent to the transfer of information to countries outside of your country of residence, including the United States, which may have data protection rules that are different from those of your country. In certain circumstances, courts, law enforcement agencies, regulatory agencies or security authorities in those other countries may be entitled to access your Personal Information.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-3">A Note to European Residents</h3>
-          <p>We typically will process your information pursuant to the following legal bases:</p>
+          <h3 className="text-xl font-semibold mt-6 mb-3">UK and European Residents</h3>
+          <p>In accordance with the UK GDPR and applicable data protection laws, we process your information pursuant to the following legal bases:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>With your consent</li>
             <li>As necessary to perform our agreement to provide Services to you</li>
-            <li>As necessary for our legitimate interests</li>
+            <li>As necessary for our legitimate interests in operating and improving our business</li>
+            <li>To comply with legal obligations under UK and applicable laws</li>
           </ul>
-          <p>We also may process your information where it is necessary to comply with a legal obligation to which we are subject.</p>
+          <p>We are committed to complying with the UK GDPR, Data Protection Act 2018, and the Privacy and Electronic Communications Regulations (PECR).</p>
 
           <h3 className="text-xl font-semibold mt-6 mb-3">Your Rights</h3>
-          <p>The laws of certain jurisdictions may provide data subjects with various rights in connection with the processing of Personal Information, including:</p>
+          <p>Under UK data protection laws, including the UK GDPR and Data Protection Act 2018, you have the following rights:</p>
           <ul className="list-disc pl-6 space-y-2">
+            <li>The right to be informed about how your personal information is being used</li>
+            <li>The right to access your personal information</li>
+            <li>The right to have inaccurate personal information rectified</li>
+            <li>The right to have your personal information erased (the "right to be forgotten")</li>
+            <li>The right to restrict processing of your personal information</li>
+            <li>The right to data portability (to obtain and reuse your personal information)</li>
+            <li>The right to object to processing, including for direct marketing purposes</li>
+            <li>Rights in relation to automated decision-making and profiling</li>
             <li>The right to withdraw any previously provided consent</li>
-            <li>The right to access certain information about you that we process</li>
-            <li>The right to have us correct or update any personal information</li>
-            <li>The right to have certain personal information erased</li>
-            <li>The right to have us temporarily block our processing of certain personal information</li>
-            <li>The right to have personal information exported into common machine-readable format</li>
-            <li>The right to object to our processing of personal information in cases of direct marketing, or when we rely on legitimate interests as our lawful basis to process your information</li>
-            <li>The right to lodge a complaint with the appropriate data protection authority</li>
           </ul>
 
           <p>
-            Where we are deemed a data controller under the laws of certain jurisdictions, we will take steps to help ensure that you are able to exercise your rights regarding Personal Information about you in accordance with applicable law. To do so, you may contact us at contact@unstuck.gg. Please note these rights may be limited in certain circumstances as provided by applicable law. We will promptly review all such requests in accordance with applicable laws. Depending on where you live, you may also have a right to lodge a complaint with a supervisory authority or other regulatory agency if you believe that we have violated any of the rights concerning Personal Information about you. We encourage you to first reach out to us at contact@unstuck.gg, so we have an opportunity to address your concerns directly before you do so.
+            To exercise any of these rights, please contact us at contact@unstuck.gg. We will respond to your request within one month, although we may extend this period in certain circumstances. Please note these rights may be limited in certain circumstances as provided by applicable law. If you are not satisfied with our response, you have the right to lodge a complaint with the Information Commissioner's Office (ICO), the UK's supervisory authority for data protection issues (ico.org.uk). We encourage you to first reach out to us at contact@unstuck.gg, so we have an opportunity to address your concerns directly.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Contact Us</h2>

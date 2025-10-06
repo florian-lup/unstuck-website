@@ -146,12 +146,12 @@ export default function TermsOfService() {
 
           <h3 className="text-xl font-semibold mt-6 mb-3">5.2 Taxes</h3>
           <p>
-            All Fees and other amounts payable by Customer under this Agreement are exclusive of taxes and similar assessments. Customer is responsible for all sales, use and excise taxes, and any other similar taxes, duties and charges of any kind imposed by any federal, state or local governmental or regulatory authority on any amounts payable by Customer hereunder, other than any taxes imposed on Unstuck's income.
+            All Fees and other amounts payable by Customer under this Agreement are exclusive of taxes and similar assessments. Customer is responsible for all Value Added Tax (VAT), sales, use and excise taxes, and any other similar taxes, duties and charges of any kind imposed by any national, regional or local governmental or regulatory authority on any amounts payable by Customer hereunder, other than any taxes imposed on Unstuck's income. Where applicable, VAT will be charged in accordance with UK VAT regulations.
           </p>
 
           <h3 className="text-xl font-semibold mt-6 mb-3">5.3 Payment</h3>
           <p>
-            Unless otherwise provided in an Order Form, Customer shall pay all Fees within thirty (30) days after the date of the invoice therefor. Customer shall make all payments hereunder in U.S. dollars. If Customer is paying Fees using a credit card or any digital payment method supported by Unstuck, Customer authorizes Unstuck to charge Customer's account for the Services using that payment method.
+            Unless otherwise provided in an Order Form, Customer shall pay all Fees within thirty (30) days after the date of the invoice therefor. Customer shall make all payments hereunder in British Pounds Sterling (GBP) or such other currency as agreed by the parties. If Customer is paying Fees using a credit card or any digital payment method supported by Unstuck, Customer authorizes Unstuck to charge Customer's account for the Services using that payment method.
           </p>
 
           <h3 className="text-xl font-semibold mt-6 mb-3">5.4 Late Payment</h3>
@@ -211,7 +211,7 @@ export default function TermsOfService() {
           
           <h3 className="text-xl font-semibold mt-6 mb-3">9.1 Unstuck Indemnity</h3>
           <p>
-            Unstuck will indemnify and hold Customer harmless from and against any third-party claim against Customer alleging that Customer's use of the Services as permitted hereunder infringe or misappropriate a third party's valid U.S. patent, copyright, trademark or trade secret.
+            Unstuck will indemnify and hold Customer harmless from and against any third-party claim against Customer alleging that Customer's use of the Services as permitted hereunder infringe or misappropriate a third party's valid UK or EU patent, copyright, trademark or trade secret.
           </p>
 
           <h3 className="text-xl font-semibold mt-6 mb-3">9.2 Customer Indemnity</h3>
@@ -238,25 +238,19 @@ export default function TermsOfService() {
             Unstuck may give general notices related to the Services that are applicable to all customers by email or through the Platform. All other notices required to be sent hereunder will be in writing and will be effective upon (i) personal delivery, or (ii) the second business day after mailing, and, if to Customer, to Customer's address on record in Unstuck's account information.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">11.8 Governing Law</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">11.8 Governing Law and Jurisdiction</h3>
           <p>
-            This Agreement and any disputes arising out of or related hereto shall be governed by and construed in accordance with the laws of the State of Delaware, without giving effect to its conflicts of laws rules.
+            This Agreement and any disputes arising out of or related hereto shall be governed by and construed in accordance with the laws of England and Wales, without giving effect to its conflicts of laws rules. The parties submit to the exclusive jurisdiction of the courts of England and Wales for the resolution of any disputes arising out of or relating to this Agreement.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">11.9 Arbitration Agreement</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">11.9 Dispute Resolution</h3>
           <p>
-            The parties shall use their best efforts to settle any dispute, claim, question, or disagreement arising out of or relating to the subject matter of these Agreement directly through good-faith negotiations, which shall be a precondition to either party initiating arbitration. If such negotiations do not resolve the dispute, it shall be finally settled by binding arbitration in the State of Delaware.
+            The parties shall use their best efforts to settle any dispute, claim, question, or disagreement arising out of or relating to the subject matter of this Agreement directly through good-faith negotiations. If such negotiations do not resolve the dispute within thirty (30) days, either party may refer the matter to the courts of England and Wales in accordance with Section 11.8.
           </p>
 
           <p>
-            You shall have the right to opt out of the provisions of this Section by sending written notice of the decision to opt out within thirty (30) days of first accepting this Agreement.
+            Nothing in this Agreement shall prevent either party from seeking interim or injunctive relief from a court of competent jurisdiction to protect its rights pending resolution of any dispute.
           </p>
-
-          <div className="bg-muted/50 p-4 rounded-lg my-6">
-            <p className="font-semibold">
-              THE PARTIES WAIVE ANY CONSTITUTIONAL AND STATUTORY RIGHTS TO GO TO COURT AND HAVE A TRIAL IN FRONT OF A JUDGE OR JURY. ALL CLAIMS AND DISPUTES WITHIN THE SCOPE OF THIS ARBITRATION AGREEMENT MUST BE ARBITRATED OR LITIGATED ON AN INDIVIDUAL BASIS AND NOT ON A CLASS BASIS. CLAIMS OF MORE THAN ONE CUSTOMER OR USER CANNOT BE ARBITRATED OR LITIGATED JOINTLY OR CONSOLIDATED WITH THOSE OF ANY OTHER CUSTOMER OR USER.
-            </p>
-          </div>
 
           <h3 className="text-xl font-semibold mt-6 mb-3">11.13 Entire Agreement</h3>
           <p>

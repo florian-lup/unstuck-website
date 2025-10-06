@@ -241,7 +241,7 @@ export function AiFeatures() {
               Boosting you harder than your best friends ever did
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl ml-auto">
-              If excuses were damage, you&apos;d break records. Unlike you, our AI doesn&apos;t blame others—take the buff and get carried by answers that actually work.
+              If excuses were damage, you&apos;d break records. Unlike you, our AI doesn&apos;t blame others—take the buff and get carried by up to date answers that actually work.
             </p>
           </div>
 
