@@ -7,25 +7,25 @@ const agents = [
   {
     name: "Builds",
     badge: "Meta",
-    description: "Get optimized builds, skill trees, and stat distributions.",
+    description: "Get optimized builds, skill trees, and stat distributions tailored to your playstyle. Whether you're min-maxing for endgame content or just trying to survive the tutorial, we've got the perfect build for you.",
     highlight: "Stop theorycrafting like it's 2009",
   },
   {
     name: "Guides",
     badge: "Walkthroughs",
-    description: "Step-by-step guides, collectibles, and progression tips.",
+    description: "Step-by-step guides, collectibles, and progression tips for every quest and mission. From hidden achievements to secret areas, never miss a thing or get lost in another confusing dungeon again.",
     highlight: "Skip the 10-minute YouTube intro",
   },
   {
     name: "Lore",
     badge: "Deep Dive",
-    description: "Explore game stories and character background details.",
+    description: "Explore game stories, character backgrounds, and world-building details you definitely missed. Understand the plot twists and impress your friends with obscure knowledge they don't care about.",
     highlight: "RP like nobody's watching",
   },
   {
     name: "Troubleshooting",
     badge: "Fix It",
-    description: "Solve bugs, crashes, and technical issues fast.",
+    description: "Solve bugs, crashes, and technical issues fast with practical solutions. From performance optimization to mod conflicts, get back to gaming instead of reading ancient forum posts from 2015.",
     highlight: "Yes, it's probably your drivers",
   },
 ];
@@ -53,7 +53,7 @@ export function AgentFeatures() {
             return (
               <Card 
                 key={index} 
-                className="bg-background/50 relative overflow-hidden border hover:border-primary/50 transition-colors group p-0"
+                className="bg-card/50 relative overflow-hidden border-none group p-0"
               >
                 <CardContent className="p-6">
                   <div className="space-y-4">
