@@ -6,15 +6,15 @@ import { UnstuckApp } from "../app/unstuck-demo";
 const features = [
   {
     title: "Lightning Fast",
-    description: "Get instant, concise answers without interrupting your gameplay flow. No more dying while you Google basic mechanics like a noob. Your teammates won't even know you needed help.",
+    description: "Get instant, concise answers without interrupting your gameplay flow. No more dying while you Google basic mechanics like a noob.",
   },
   {
     title: "Performance Optimized",
-    description: "Minimal RAM and CPU usage ensures smooth gaming with no frame drops. Unlike your browser with 47 tabs open, this actually runs efficiently. No excuses for playing badly anymore.",
+    description: "Minimal RAM and CPU usage ensures smooth gaming with no frame drops. Unlike your browser with 47 tabs open, this actually runs efficiently.",
   },
   {
     title: "No Alt-Tabbing Required",
-    description: "Stay in the game and use the transparent overlay while playing without losing focus. Stop pretending you 'lagged out' when you were really reading a wiki. We know what you were doing.",
+    description: "Stay in the game and use the transparent overlay while playing without losing focus. Stop pretending you 'lagged out' when you were reading a wiki.",
   },
 ];
 

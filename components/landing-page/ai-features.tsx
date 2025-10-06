@@ -234,14 +234,14 @@ export function AiFeatures() {
         <div className="text-right mb-12">
             <div className="flex justify-end mb-4">
               <Badge variant="default" className="text-sm font-medium">
-                The Buff
+                Intelligence
               </Badge>
             </div>
             <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
               Boosting you harder than your best friends ever did
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl ml-auto">
-              If excuses were damage, you&apos;d break records. Get carried by AI so good, people will think you finally touched grass and learned to play. Spoiler: you didn&apos;t.
+              If excuses were damage, you&apos;d break records. Unlike you, our AI doesn&apos;t blame others—take the buff and get carried by answers that actually work.
             </p>
           </div>
 
