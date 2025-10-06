@@ -6,10 +6,10 @@ import { Check } from "lucide-react";
 
 const plans = [
   {
-    name: "Loser",
+    name: "Loser 🤷",
     price: "$0",
-    description: "For those who insist on using a browser 🤷",
-    badge: "Why though?",
+    description: "For those who insist on using a browser",
+    badge: null,
     badgeVariant: "secondary" as const,
     features: [
       "Alt-tab out of your game constantly",
@@ -24,7 +24,7 @@ const plans = [
     name: "Free",
     price: "$0",
     description: "Perfect for casual gamers getting started",
-    badge: "Popular",
+    badge: null,
     badgeVariant: "default" as const,
     features: [
       "50 AI queries per day",
@@ -38,7 +38,7 @@ const plans = [
     name: "Community",
     price: "$4.99",
     description: "For engaged gamers who want more",
-    badge: "Best Value",
+    badge: "Popular",
     badgeVariant: "default" as const,
     features: [
       "200 AI queries per day",
@@ -53,8 +53,8 @@ const plans = [
     name: "Pro",
     price: "$9.99",
     description: "Unlimited power for serious gamers",
-    badge: null,
-    badgeVariant: "default" as const,
+    badge: "Coming Soon",
+    badgeVariant: "secondary" as const,
     features: [
       "Unlimited AI queries",
       "All advanced modes (builds, guides, lore, troubleshooting)",
@@ -85,7 +85,7 @@ export function Pricing() {
           {plans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`relative ${plan.badge && plan.name !== "Loser" ? 'border-2 border-primary' : ''}`}
+              className={`relative ${plan.badge && plan.name !== "Loser" && plan.name !== "Pro" ? 'border-2 border-primary' : ''}`}
             >
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">

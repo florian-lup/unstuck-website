@@ -72,7 +72,7 @@ export function AgentFeatures() {
 
                     {/* Highlight */}
                     <div className="pt-2 border-t border-border/50">
-                      <p className="text-xs text-primary font-medium">
+                      <p className="text-xs text-primary/50 font-medium">
                         {agent.highlight}
                       </p>
                     </div>

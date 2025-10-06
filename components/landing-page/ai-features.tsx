@@ -6,19 +6,16 @@ import { useState, useEffect } from "react";
 
 const benefits = [
   {
-    badge: "AI Chat",
     title: "Smart Chat",
     description: "Natural conversations with AI that understands your game context and questions. Get personalized answers tailored to your playstyle and current progress.",
     className: "md:col-span-1",
   },
   {
-    badge: "Context",
     title: "Always up to date",
     description: "Searches multiple sources on the web for the most up to date information. Real-time data from wikis, patch notes, and community guides.",
     className: "md:col-span-1",
   },
   {
-    badge: "Support",
     title: "Multilingual Support",
     description: "Chat in your preferred language with support for 50+ languages. Break language barriers and get help in the language you're most comfortable with.",
     className: "md:col-span-1",
@@ -258,12 +255,7 @@ export function AiFeatures() {
                     >
                       <CardContent className="h-full flex flex-col justify-between border-l">
                         <div className="space-y-4">
-                          <div className="flex items-center justify-between">
-                            <h3 className="font-semibold text-xl">{benefit.title}</h3>
-                            <Badge variant="secondary" className="text-xs font-medium">
-                              {benefit.badge}
-                            </Badge>
-                          </div>
+                          <h3 className="font-semibold text-xl">{benefit.title}</h3>
                           <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                         </div>
                       </CardContent>
