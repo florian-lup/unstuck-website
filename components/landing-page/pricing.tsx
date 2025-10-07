@@ -20,7 +20,7 @@ const plans = [
   },
   {
     name: "Community",
-    price: "$4.99",
+    price: "£7",
     priceDetail: "/ month",
     features: {
       overlay: true,
@@ -32,7 +32,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$9.99",
+    price: "£15",
     priceDetail: "/ month",
     features: {
       overlay: true,
