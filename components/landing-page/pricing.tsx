@@ -1,8 +1,9 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Check, X } from "lucide-react";
+import { Check, X, Download } from "lucide-react";
 
 const plans = [
   {
@@ -13,9 +14,8 @@ const plans = [
       overlay: true,
       queries: "150 lifetime",
       agents: false,
-      modes: "Basic chat",
-      updates: true,
-      keybinds: false,
+      models: "Cost efficient",
+      tokens: "Limited",
     },
   },
   {
@@ -26,9 +26,8 @@ const plans = [
       overlay: true,
       queries: "300 per month",
       agents: false,
-      modes: "Advanced chat",
-      updates: true,
-      keybinds: true,
+      models: "Smartest",
+      tokens: "Limited",
     },
   },
   {
@@ -39,34 +38,32 @@ const plans = [
       overlay: true,
       queries: "Unlimited",
       agents: true,
-      modes: "All modes",
-      updates: true,
-      keybinds: true,
+      models: "Reasoning",
+      tokens: "Unlimited",
     },
   },
 ];
 
 const loserPlan = {
-  name: "Loser 🤷",
+  name: "Loser",
   price: "$0",
   description: "For those who insist on using a browser",
   features: [
     "Alt-tab out of your game constantly",
-    "Miss crucial moments while typing",
-    "No overlay integration (obviously)",
-    "Manually copy-paste everything",
-    "Get wrecked while reading guides",
-    "Your teammates judging you",
+    "Spend hours reading wikis and how to's",
+    "Browser eating RAM like it's a buffet",
+    "Only one language unless you translate",
+    "None to trash talk you when needed",
   ],
+  emoji: "🤷",
 };
 
 const featureRows = [
   { label: "In-game overlay", key: "overlay" as const },
-  { label: "AI queries", key: "queries" as const },
+  { label: "Queries", key: "queries" as const },
   { label: "Agents", key: "agents" as const },
-  { label: "Game modes", key: "modes" as const },
-  { label: "Regular updates", key: "updates" as const },
-  { label: "Custom keybinds", key: "keybinds" as const },
+  { label: "AI models", key: "models" as const },
+  { label: "Token Limit", key: "tokens" as const },
 ];
 
 export function Pricing() {
@@ -74,18 +71,18 @@ export function Pricing() {
     <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16 md:py-16">
       <div className="mx-auto">
         {/* Section Header */}
-        <div className="mb-12">
+        <div className="mb-12 text-right">
           <Badge variant="default" className="mb-4 text-sm font-medium">Pricing</Badge>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
             Don&apos;t be the reason for the surrender vote
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-muted-foreground max-w-2xl ml-auto">
             Start free and upgrade when you&apos;re ready to help maintain our spaghetti code
           </p>
         </div>
 
         {/* Pricing Layout: Table + Loser Card */}
-        <div className="flex flex-col lg:flex-row gap-6 items-start">
+        <div className="flex flex-col lg:flex-row gap-6 lg:items-stretch items-start">
           {/* Pricing Table */}
           <div className="flex-1 w-full overflow-hidden">
             {/* Plan Headers */}
@@ -105,15 +102,29 @@ export function Pricing() {
             </div>
 
             {/* Features Header */}
-            <div className="p-4 border-b">
-              <h4 className="text-xl font-bold">Features</h4>
+            <div className="grid grid-cols-4 border-b border-border/50">
+              <div className="p-4">
+                <h4 className="text-xl font-bold">Features</h4>
+              </div>
+              <div className="p-4 flex items-center justify-center">
+                <Button size="sm" variant="outline" className="h-7 text-xs">
+                  <Download className="size-3 mr-1" />
+                  Download
+                </Button>
+              </div>
+              <div className="p-4 flex items-center justify-center">
+                <Badge variant="default" className="text-xs">Popular</Badge>
+              </div>
+              <div className="p-4 flex items-center justify-center">
+                <Badge variant="secondary" className="text-xs">Coming Soon</Badge>
+              </div>
             </div>
 
             {/* Feature Rows */}
             {featureRows.map((row, rowIndex) => (
               <div 
                 key={rowIndex} 
-                className="grid grid-cols-4 border-b"
+                className="grid grid-cols-4 border-b border-border/50"
               >
                 <div className="p-4 font-medium">{row.label}</div>
                 {plans.map((plan, planIndex) => {
@@ -137,7 +148,7 @@ export function Pricing() {
           </div>
 
           {/* Loser Card */}
-          <Card className="w-full lg:w-80 shrink-0 border-2 border-muted">
+          <Card className="w-full lg:w-80 shrink-0 border-2 border-muted lg:self-stretch">
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-2xl mb-2">{loserPlan.name}</CardTitle>
               <div className="mb-2">
@@ -147,14 +158,16 @@ export function Pricing() {
             </CardHeader>
 
             <CardContent className="space-y-4">
-              <ul className="space-y-3">
+              <ul className="space-y-3 list-disc list-inside">
                 {loserPlan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <X className="size-5 text-muted-foreground shrink-0 mt-0.5" />
-                    <span className="text-sm">{feature}</span>
+                  <li key={idx} className="text-sm">
+                    {feature}
                   </li>
                 ))}
               </ul>
+              <div className="text-center text-4xl pt-4">
+                {loserPlan.emoji}
+              </div>
             </CardContent>
           </Card>
         </div>
