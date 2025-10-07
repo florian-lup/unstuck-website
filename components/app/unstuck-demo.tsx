@@ -402,72 +402,71 @@ export function UnstuckApp() {
               <div className="px-6">
                 <div className="space-y-4">
                   <p className="text-gray-200 text-sm leading-relaxed">
-                    To defeat <span className="font-semibold text-white">Dimensius the All-Devouring</span> on Heroic in <span className="font-semibold text-white">World of Warcraft 11.2</span> (Manaforge Omega raid), you must master a multi-phase encounter with unique mechanics focused on positioning, add control, and survival during Devour phases.
+                    Let me guess—you stood in the void zones and blamed the healer, right? Anyway, since you clearly can&apos;t figure this out yourself, here&apos;s how to defeat <span className="font-semibold text-white">Dimensius the All-Devouring</span> on Heroic in <span className="font-semibold text-white">World of Warcraft 11.2</span> without wiping your raid (again).
                   </p>
 
                   <div>
-                    <p className="text-white font-semibold text-sm mb-2">Overview:</p>
+                    <p className="text-white font-semibold text-sm mb-2">The Basics (Since You Obviously Missed Them):</p>
                     <ul className="space-y-2 text-gray-300 text-sm list-disc list-inside">
-                      <li>The fight has several phases, each with distinct mechanics.</li>
-                      <li>Success depends on precise raid movement, add management, and using the environment to survive lethal boss abilities.</li>
+                      <li>This is a multi-phase encounter. Yes, there&apos;s more than one phase. Shocking, I know.</li>
+                      <li>You&apos;ll need to actually pay attention to positioning, adds, and not dying. Revolutionary concept.</li>
                     </ul>
                   </div>
 
                   <div>
-                    <p className="text-white font-semibold text-sm mb-2">Key Points:</p>
+                    <p className="text-white font-semibold text-sm mb-2">How Not to Embarrass Yourself:</p>
                     
                     <div className="space-y-3">
                       <div>
-                        <p className="text-white font-medium text-sm mb-1">Phase 1: Split and Add Control</p>
+                        <p className="text-white font-medium text-sm mb-1">Phase 1: Try Not to Mess This Up Immediately</p>
                         <ul className="space-y-1 text-gray-300 text-sm list-disc list-inside ml-2">
-                          <li>Split the raid into two balanced groups (left/right), each taking a portal at the pull.</li>
-                          <li>Kill Living Mass adds quickly; assigned players pick up Excess Mass orbs dropped by these adds.</li>
-                          <li>Orb carriers must meet in the center to combine debuffs and drop a protective puddle, which prevents the raid from being inhaled by Dimensius.</li>
-                          <li>Afterward, avoid the tank smash knockback by positioning to the sides—never behind the boss or near the edge.</li>
-                          <li>Handle group soak mechanics and use healing cooldowns as needed.</li>
+                          <li>Split your raid into two groups. I know teamwork is hard, but stay with me here.</li>
+                          <li>Kill the Living Mass adds. They&apos;re big and obvious—even you should be able to target them.</li>
+                          <li>Pick up the Excess Mass orbs. No, not EVERY orb. Just the ones you&apos;re assigned. Meet in the center with your partner and drop the puddle. It&apos;s not rocket science.</li>
+                          <li>Don&apos;t stand behind the boss during the tank smash. Seriously, just... don&apos;t.</li>
+                          <li>When the group soak happens, actually soak it. Wild concept, I know.</li>
                         </ul>
                       </div>
 
                       <div>
-                        <p className="text-white font-medium text-sm mb-1">Platform Transition:</p>
+                        <p className="text-white font-medium text-sm mb-1">Platform Transition (AKA The Part Where Half Your Raid Falls Off):</p>
                         <ul className="space-y-1 text-gray-300 text-sm list-disc list-inside ml-2">
-                          <li>After killing the adds and handling mechanics, you&apos;ll transition to the next platform, often via a dragonriding intermission.</li>
+                          <li>Use your dragonriding skills to reach the next platform. Yes, the same ones you use to AFK fly to the nearest mailbox.</li>
                         </ul>
                       </div>
 
                       <div>
-                        <p className="text-white font-medium text-sm mb-1">Phase 2: Add Priority and Cleave</p>
+                        <p className="text-white font-medium text-sm mb-1">Phase 2: Add Control for People Who Can&apos;t Count</p>
                         <ul className="space-y-1 text-gray-300 text-sm list-disc list-inside ml-2">
-                          <li>On each new platform, prioritize killing Void Wardens and Nullbinders. Nullbinders cast a stacking DoT and slow; use Death Knight grips or similar abilities to group them for efficient cleave.</li>
-                          <li>You&apos;re on a timer: if you don&apos;t kill the adds before Dimensius cycles abilities twice, the mini-boss enrages and wipes the raid.</li>
+                          <li>Kill Void Wardens and Nullbinders first. Not the boss. Not random trash. These specific adds.</li>
+                          <li>Nullbinders slow you down and hurt. Grip them together and cleave. It&apos;s called efficiency—look it up.</li>
+                          <li>You have limited time before the mini-boss enrages. If you fail this twice, maybe heroic isn&apos;t for you?</li>
                         </ul>
                       </div>
 
                       <div>
-                        <p className="text-white font-medium text-sm mb-1">Final Phase (Singularity):</p>
+                        <p className="text-white font-medium text-sm mb-1">Final Phase (Where Your Raid Actually Falls Apart):</p>
                         <ul className="space-y-1 text-gray-300 text-sm list-disc list-inside ml-2">
-                          <li>Upon reaching the last platform, use Heroism/Bloodlust immediately for burst damage while the boss is stunned and takes double damage.</li>
-                          <li>Dimensius will summon 8 stars that orbit him. At 100 energy, he casts Devour—everyone must hide inside a star to survive.</li>
-                          <li>Each Devour pulls the outer ring closer to the boss, shrinking the safe area. After the third Devour, the ring covers the platform and the raid dies.</li>
-                          <li>Avoid touching the boss&apos;s hitbox (instant death) and dodge falling stars, which deal heavy damage.</li>
-                          <li>After each Devour, the star used becomes a black hole—avoid it for the rest of the fight.</li>
+                          <li>Pop Heroism/Bloodlust immediately. Yes, NOW. Not when the boss is at 1% and everyone&apos;s dead.</li>
+                          <li>Hide inside the 8 stars when Dimensius casts Devour at 100 energy. It&apos;s literally a game of hide-and-seek, and somehow you&apos;re still losing.</li>
+                          <li>After three Devours, you wipe. So maybe try killing the boss before then? Just a thought.</li>
+                          <li>Don&apos;t touch the boss&apos;s hitbox (instant death), don&apos;t stand in used stars (they&apos;re black holes now), and dodge the falling stars. How many things can you stand in before you learn?</li>
                         </ul>
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <p className="text-white font-semibold text-sm mb-2">Specific Details:</p>
+                    <p className="text-white font-semibold text-sm mb-2">Pro Tips (For When Basic Tips Aren&apos;t Enough):</p>
                     <ul className="space-y-2 text-gray-300 text-sm list-disc list-inside">
-                      <li>Assign players to handle Excess Mass and group soaks in Phase 1.</li>
-                      <li>Use movement abilities to avoid knockbacks and reposition quickly, especially during pushbacks and ring mechanics.</li>
-                      <li>Healers should prioritize instant-cast spells and defensives during high-movement phases.</li>
-                      <li>Tanks must manage boss positioning to avoid pulling the raid into dangerous zones.</li>
+                      <li>Actually use your movement abilities. They&apos;re not just for show.</li>
+                      <li>Healers: spam those instant casts. Your raid is going to need it with all the avoidable damage they&apos;re taking.</li>
+                      <li>Tanks: position the boss properly. If you wipe because you turned him toward the raid, that&apos;s on you, chief.</li>
                     </ul>
                   </div>
 
                   <p className="text-gray-300 text-sm leading-relaxed italic">
-                    Would you like tips for a specific class or role for this encounter?
+                    Still wiping? Maybe it&apos;s not the strategy—it&apos;s you. Want class-specific advice? Too bad, this is a demo. 💀
                   </p>
                 </div>
               </div>

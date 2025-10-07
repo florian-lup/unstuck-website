@@ -7,13 +7,13 @@ const agents = [
   {
     name: "Builds",
     badge: "Meta",
-    description: "Get optimized builds, skill trees, and stat distributions tailored to your playstyle. Whether you're min-maxing for endgame content or just trying to survive the tutorial, we've got the perfect build for you.",
+    description: "Get optimized builds, skill trees, and stat distributions. Whether you're min-maxing for endgame content or just trying to survive the tutorial, we're here to save you from that 200 IQ big-brain theory.",
     highlight: "Stop theorycrafting like it's 2009",
   },
   {
     name: "Guides",
     badge: "Walkthroughs",
-    description: "Step-by-step guides, collectibles, and progression tips for every quest and mission. From hidden achievements to secret areas, never miss a thing or get lost in another confusing dungeon again.",
+    description: "Step-by-step guides and progression tips, from hidden achievements to secret areas. Because you've been wandering in circles for 40 minutes looking for that one quest item. Just ask for help already.",
     highlight: "Skip the 10-minute YouTube intro",
   },
   {
@@ -25,7 +25,7 @@ const agents = [
   {
     name: "Troubleshooting",
     badge: "Fix It",
-    description: "Solve bugs, crashes, and technical issues fast with practical solutions. From performance optimization to mod conflicts, get back to gaming instead of reading ancient forum posts from 2015.",
+    description: "Before you blame the devs, try updating those drivers you've been ignoring for six months. We'll walk you through basic PC maintenance and game settings your 'setup' desperately needs.",
     highlight: "Yes, it's probably your drivers",
   },
 ];
@@ -53,12 +53,12 @@ export function AgentFeatures() {
             return (
               <Card 
                 key={index} 
-                className="bg-card/50 relative overflow-hidden border-none group p-0"
+                className="bg-card/50 relative overflow-hidden border-none group p-0 hover:bg-card/70 transition-colors h-full flex flex-col"
               >
-                <CardContent className="p-6">
-                  <div className="space-y-4">
+                <CardContent className="p-6 flex flex-col flex-1">
+                  <div className="flex flex-col flex-1">
                     {/* Name and Badge */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-4">
                       <h3 className="font-semibold text-xl">{agent.name}</h3>
                       <Badge variant="secondary" className="text-xs font-medium">
                         {agent.badge}
@@ -66,12 +66,12 @@ export function AgentFeatures() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
                       {agent.description}
                     </p>
 
                     {/* Highlight */}
-                    <div className="pt-2 border-t border-border/50">
+                    <div className="pt-2 border-t border-border/50 mt-auto">
                       <p className="text-xs text-primary/50 font-medium">
                         {agent.highlight}
                       </p>

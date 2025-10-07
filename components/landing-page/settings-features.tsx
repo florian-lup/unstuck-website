@@ -13,52 +13,50 @@ import {
 const patchNotes = [
   {
     title: "Game Collection",
-    description: "Track your entire gaming library in one place. Automatically syncs with your favorite platforms and keeps your game list organized. Because remembering what you own is apparently too hard now.",
+    description: "Comes with a preset list of supported games. We're adding custom game management soon, because clearly you need more ways to disappoint yourself across different titles.",
     features: [
-      "Auto-sync with Steam, Epic, GOG, and more",
-      "Custom tags and categories",
-      "Play time tracking and statistics",
-      "Quick search and filter options"
+      "2,000 hours in one game but you're still hardstuck silver",
+      "Your most played genre is 'Never Finished'"
+    ],
+  },
+    {
+    title: "Emotional Support",
+    description: "Because someone needs to tell you that flash into five enemies wasn't 'worth a shot.' Think of it as tough love, except we're not sorry and you probably deserved it.",
+    features: [
+      "Finally, honest feedback about your gameplay",
+      "The only flame that might actually help you improve",
     ],
   },
   {
     title: "Custom Keybinds",
-    description: "Rebind every hotkey to match your playstyle (or your weird ESDF setup). Full keyboard and mouse support with conflict detection. Your muscle memory, your rules.",
+    description: "Remap everything because default settings are 'why you're losing' (totally not your mechanics). Blame your keyboard, we support that level of delusion.",
     features: [
-      "Fully customizable shortcuts",
-      "Conflict detection and warnings",
-      "Import/export key profiles",
-      "Mouse button bindings"
+      "Your binds are as optimal as your KDA",
+      "12-button mouse, still can't hit abilities",
     ],
   },
   {
     title: "Quick Hide Toggle",
-    description: "Instantly hide or show the chat window with a keybind. Perfect for those moments when you need full screen clarity or when your teammates ask what that window is.",
+    description: "Panic button to hide the AI coach when someone walks by. Can't let them know you need help in a game you've played for 3 years. Your secret's safe with us, champ.",
     features: [
-      "Customizable toggle hotkey",
-      "Smooth fade animations",
-      "Remembers last state",
-      "Independent from overlay visibility"
+      "Your teammates wonder why you suddenly got good",
+      "That panic button when mom walks in"
     ],
   },
   {
     title: "Draggable Chat Window",
-    description: "Move the chat window anywhere on your screen because one size doesn't fit all. Position it wherever your eyes naturally go, or wherever it blocks the least amount of enemies trying to kill you.",
+    description: "Drag the overlay anywhere, you'll spend 20 minutes positioning this perfectly and still lose the next match. At least something in your gaming setup will be optimized.",
     features: [
-      "Click and drag to reposition",
-      "Remembers your preferred position",
-      "Snap to screen edges",
-      "Multi-monitor support"
+      "The only thing you're positioning correctly",
+      "Finally, a skill you can master"
     ],
   },
   {
     title: "Transparency Controls",
-    description: "Adjust overlay opacity from 0-100% so you can see the game behind the thing telling you how to play the game. Peak modern gaming experience, really.",
+    description: "Make the AI advice invisible so you can gaslight yourself into thinking you're naturally talented. Spoiler alert: your teammates can still see you running it down mid.",
     features: [
-      "Per-window transparency settings",
-      "Quick opacity hotkey",
-      "Auto-hide in fullscreen",
-      "Background blur options"
+      "Set to 0% so you can pretend you're naturally good",
+      "Your ego is the only thing less transparent",
     ],
   },
 ];
@@ -73,10 +71,10 @@ export function SettingsFeatures() {
             Patch Notes
           </Badge>
           <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
-            Features you didn&apos;t ask for, but definitely needed
+            Features you didn&apos;t ask for, and definitely not needed
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-            We&apos;ve been cooking. From game libraries to keybinds, every setting you need to customize your experience. Because default settings are for casuals.
+            Tons of customization options to actually help you improve. Too bad we can&apos;t fix your decision-making, but we&apos;re working on it.
           </p>
         </div>
 
@@ -93,20 +91,20 @@ export function SettingsFeatures() {
             {patchNotes.map((patch, index) => (
               <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-[30%]">
                 <Card 
-                  className="bg-card/50 relative overflow-hidden border-none group hover:bg-card/70 transition-colors h-full"
+                  className="bg-card/50 relative overflow-hidden border-none group hover:bg-card/70 transition-colors h-full flex flex-col"
                 >
-                  <CardContent className="p-6">
-                    <div className="space-y-4">
+                  <CardContent className="p-6 flex flex-col flex-1">
+                    <div className="flex flex-col flex-1">
                       {/* Title */}
-                      <h3 className="font-semibold text-xl">{patch.title}</h3>
+                      <h3 className="font-semibold text-xl mb-4">{patch.title}</h3>
 
                       {/* Description */}
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
                         {patch.description}
                       </p>
 
                       {/* Features List */}
-                      <div className="pt-2 border-t border-border/50">
+                      <div className="pt-2 border-t border-border/50 mt-auto">
                         <ul className="space-y-2">
                           {patch.features.map((feature, featureIndex) => (
                             <li 
