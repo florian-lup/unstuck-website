@@ -13,6 +13,7 @@ const plans = [
     features: {
       overlay: true,
       queries: "150 lifetime",
+      voiceChat: "60",
       agents: false,
       models: "Cost efficient",
       tokens: "Limited",
@@ -25,6 +26,7 @@ const plans = [
     features: {
       overlay: true,
       queries: "300 per month",
+      voiceChat: "150",
       agents: false,
       models: "Smartest",
       tokens: "Limited",
@@ -37,6 +39,7 @@ const plans = [
     features: {
       overlay: true,
       queries: "Unlimited",
+      voiceChat: "Unlimited",
       agents: true,
       models: "Reasoning",
       tokens: "Unlimited",
@@ -61,6 +64,7 @@ const loserPlan = {
 const featureRows = [
   { label: "In-game overlay", key: "overlay" as const },
   { label: "Queries", key: "queries" as const },
+  { label: "Voice Chat", key: "voiceChat" as const },
   { label: "Agents", key: "agents" as const },
   { label: "AI models", key: "models" as const },
   { label: "Token Limit", key: "tokens" as const },
