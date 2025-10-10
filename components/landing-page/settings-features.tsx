@@ -13,7 +13,7 @@ import {
 const patchNotes = [
   {
     title: "Game Collection",
-    description: "Comes with a preset list of supported games. We're adding custom game management soon, because clearly you need more ways to disappoint yourself across different titles.",
+    description: "More ways to disappoint yourself across different titles. The app comes with a preset list of supported games but you can also create and manage your own game library.",
     features: [
       "2,000 hours in one game but you're still hardstuck silver",
       "Your most played genre is 'Never Finished'"
