@@ -201,32 +201,15 @@ export function UnstuckApp() {
           </div>
           
           {/* Voice Button */}
-          <Tooltip>
-            <TooltipTrigger asChild onClick={(e) => e.preventDefault()}>
-              <div className="inline-block">
-                <Toggle 
-                  variant="default" 
-                  size="sm"
-                  pressed={isSpeaking}
-                  onPressedChange={setIsSpeaking}
-                  className="gap-1.5 text-gray-300 hover:!bg-white/10 hover:text-white data-[state=on]:!bg-red-500/20 rounded-full px-3 bg-transparent [&[data-state=on]>svg]:text-red-400 [&[data-state=on]>span]:text-white">
-                  <Mic className="size-4" />
-                  <span className="text-sm">Voice</span>
-                </Toggle>
-              </div>
-            </TooltipTrigger>
-            <TooltipContent 
-              side="bottom"
-              sideOffset={8}
-              className="!bg-transparent border-0 rounded-lg text-white text-xs backdrop-blur-md [&_svg]:!hidden [&>*]:last:!hidden"
-              style={{ 
-                backgroundColor: 'rgba(0, 0, 0, 1) !important',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
-                backdropFilter: 'blur(8px)'
-              }}>
-              <span>Voice Chat Coming Soon</span>
-            </TooltipContent>
-          </Tooltip>
+          <Toggle 
+            variant="default" 
+            size="sm"
+            pressed={isSpeaking}
+            onPressedChange={setIsSpeaking}
+            className="gap-1.5 text-gray-300 hover:!bg-white/10 hover:text-white data-[state=on]:!bg-red-500/20 rounded-full px-3 bg-transparent [&[data-state=on]>svg]:text-red-400 [&[data-state=on]>span]:text-white">
+            <Mic className="size-4" />
+            <span className="text-sm">Voice</span>
+          </Toggle>
           
           {/* Chat Button */}
           <Button 

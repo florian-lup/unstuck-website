@@ -5,7 +5,7 @@ import { UnstuckApp } from "../app/unstuck-demo";
 
 const features = [
   {
-    title: "Pretty Fast",
+    title: "Voice & Text Chat",
     description: "Get fast, concise answers without interrupting your gameplay flow or pausing the action. Ask questions mid-combat, during cutscenes, or while speed-running—get answers in seconds. No more dying while you Google basic mechanics.",
   },
   {
