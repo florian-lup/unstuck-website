@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-20 pt-32 pb-16 md:pt-40 md:pb-16">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-20 pt-32 md:pt-40 pb-16">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
         <h1 className="text-xl font-bold tracking-tight md:text-6xl mb-5 text-gradient">

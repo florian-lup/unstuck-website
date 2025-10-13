@@ -71,7 +71,7 @@ const featureRows = [
 
 export function Pricing() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16 md:py-16">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16">
       <div className="mx-auto">
         {/* Section Header */}
         <div className="mb-12 text-right">
