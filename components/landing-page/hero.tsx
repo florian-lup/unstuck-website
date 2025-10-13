@@ -26,9 +26,9 @@ export function Hero() {
       </div>
 
       {/* Demo Video */}
-      <div className="flex justify-center mt-12 mx-auto">
+      <div className="flex justify-center mt-12 w-full">
         <video
-          className="rounded-xl w-full h-[600px] object-cover"
+          className="rounded-xl w-full h-auto lg:h-[600px] object-contain lg:object-cover"
           autoPlay
           muted
           loop

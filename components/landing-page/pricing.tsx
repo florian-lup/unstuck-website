@@ -88,8 +88,64 @@ export function Pricing() {
 
         {/* Pricing Layout: Table + Loser Card */}
         <div className="flex flex-col lg:flex-row gap-6 lg:items-stretch items-start">
-          {/* Pricing Table */}
-          <div className="flex-1 w-full overflow-hidden">
+          {/* Mobile Cards (visible only on mobile) */}
+          <div className="flex-1 w-full md:hidden space-y-4">
+            {plans.map((plan, index) => (
+              <Card key={index} className={`${index === 1 ? 'border-2 border-primary' : ''}`}>
+                <CardHeader className="text-center pb-4">
+                  <div className="flex justify-center mb-2">
+                    {index === 0 && (
+                      <Button size="sm" variant="outline" className="h-7 text-xs">
+                        <Download className="size-3 mr-1" />
+                        Download
+                      </Button>
+                    )}
+                    {index === 1 && (
+                      <Badge variant="default" className="text-xs">
+                        Popular
+                      </Badge>
+                    )}
+                    {index === 2 && (
+                      <Badge variant="secondary" className="text-xs">
+                        Coming Soon
+                      </Badge>
+                    )}
+                  </div>
+                  <CardTitle className="text-2xl mb-2">{plan.name}</CardTitle>
+                  <div>
+                    <span className="text-3xl font-bold">{plan.price}</span>
+                    {plan.priceDetail && (
+                      <span className="text-sm text-muted-foreground ml-1">{plan.priceDetail}</span>
+                    )}
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {featureRows.map((row, rowIndex) => {
+                    const value = plan.features[row.key];
+                    return (
+                      <div key={rowIndex} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
+                        <span className="font-medium text-sm">{row.label}</span>
+                        <div className="flex items-center">
+                          {typeof value === "boolean" ? (
+                            value ? (
+                              <Check className="size-5 text-primary" />
+                            ) : (
+                              <X className="size-5 text-muted-foreground" />
+                            )
+                          ) : (
+                            <span className="text-sm">{value}</span>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Pricing Table (hidden on mobile) */}
+          <div className="hidden md:block flex-1 w-full overflow-hidden">
             {/* Plan Headers */}
             <div className="grid grid-cols-4">
               <div className="p-6"></div>
@@ -164,13 +220,15 @@ export function Pricing() {
             </CardHeader>
 
             <CardContent className="space-y-4">
+              <div className="flex justify-center">
               <ul className="space-y-3 list-disc list-inside">
                 {loserPlan.features.map((feature, idx) => (
                   <li key={idx} className="text-sm">
                     {feature}
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <div className="text-center text-4xl pt-4">{loserPlan.emoji}</div>
             </CardContent>
           </Card>
