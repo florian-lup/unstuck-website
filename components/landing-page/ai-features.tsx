@@ -244,9 +244,9 @@ export function AiFeatures() {
 
           {/* Features Layout */}
           <div className="relative">
-            <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col lg:flex-row gap-6">
               {/* Left side - stacked features */}
-              <div className="w-full md:w-1/2 flex flex-col gap-6 p-2">
+              <div className="w-full lg:w-1/2 flex flex-col gap-6 p-2 order-1">
                 {benefits.map((benefit, index) => {
                   return (
                     <Card 
@@ -265,7 +265,7 @@ export function AiFeatures() {
               </div>
               
               {/* Right side - chat message area */}
-              <div className="w-full md:w-1/2 bg-background/50 rounded-lg border relative overflow-hidden">
+              <div className="w-full lg:w-1/2 bg-background/50 rounded-lg border relative overflow-hidden order-2 h-[500px] lg:h-auto">
                 <video 
                   className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
                   autoPlay
