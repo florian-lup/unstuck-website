@@ -28,7 +28,7 @@ const plans = [
       queries: "300 per month",
       voiceChat: "150",
       agents: false,
-      models: "Smartest",
+      models: "Smart",
       tokens: "Limited",
     },
   },
@@ -67,7 +67,6 @@ const featureRows = [
   { label: "Voice Chat", key: "voiceChat" as const },
   { label: "Agents", key: "agents" as const },
   { label: "AI models", key: "models" as const },
-  { label: "Token Limit", key: "tokens" as const },
 ];
 
 export function Pricing() {
