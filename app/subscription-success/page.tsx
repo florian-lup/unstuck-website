@@ -22,12 +22,10 @@ export default function SubscriptionSuccess() {
 
           {/* Message */}
           <div className="space-y-4 text-muted-foreground max-w-md">
+            <p>Thank you for subscribing!</p>
             <p>
-              Thank you for subscribing! 
-            </p>
-            <p>
-              You now have access to all core features. Download the app to get started
-              and level up your gaming experience.
+              You now have access to all core features. Download the app to get started and level up
+              your gaming experience.
             </p>
           </div>
 
@@ -35,10 +33,7 @@ export default function SubscriptionSuccess() {
           <div className="pt-8 text-sm text-muted-foreground">
             <p>
               Need help?{" "}
-              <a
-                href="mailto:contact@unstuck.gg"
-                className="text-foreground hover:underline"
-              >
+              <a href="mailto:contact@unstuck.gg" className="text-foreground hover:underline">
                 Contact us
               </a>
             </p>
@@ -46,12 +41,7 @@ export default function SubscriptionSuccess() {
 
           {/* Logo and Brand */}
           <div className="flex items-center gap-3 pt-4">
-            <Image
-              src="/unstuck-logo-eye.svg"
-              alt="Unstuck Logo"
-              width={40}
-              height={40}
-            />
+            <Image src="/unstuck-logo-eye.svg" alt="Unstuck Logo" width={40} height={40} />
             <span className="text-2xl font-bold font-mokoto">Unstuck</span>
           </div>
         </div>
@@ -59,4 +49,3 @@ export default function SubscriptionSuccess() {
     </div>
   );
 }
-

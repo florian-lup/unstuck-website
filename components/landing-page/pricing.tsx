@@ -75,7 +75,9 @@ export function Pricing() {
       <div className="mx-auto">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <Badge variant="default" className="mb-4 text-sm font-medium">Pricing</Badge>
+          <Badge variant="default" className="mb-4 text-sm font-medium">
+            Pricing
+          </Badge>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
             Don&apos;t be the reason for the surrender vote
           </h2>
@@ -116,19 +118,20 @@ export function Pricing() {
                 </Button>
               </div>
               <div className="p-4 flex items-center justify-center">
-                <Badge variant="default" className="text-xs">Popular</Badge>
+                <Badge variant="default" className="text-xs">
+                  Popular
+                </Badge>
               </div>
               <div className="p-4 flex items-center justify-center">
-                <Badge variant="secondary" className="text-xs">Coming Soon</Badge>
+                <Badge variant="secondary" className="text-xs">
+                  Coming Soon
+                </Badge>
               </div>
             </div>
 
             {/* Feature Rows */}
             {featureRows.map((row, rowIndex) => (
-              <div 
-                key={rowIndex} 
-                className="grid grid-cols-4 border-b border-border/50"
-              >
+              <div key={rowIndex} className="grid grid-cols-4 border-b border-border/50">
                 <div className="p-4 font-medium">{row.label}</div>
                 {plans.map((plan, planIndex) => {
                   const value = plan.features[row.key];
@@ -168,9 +171,7 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              <div className="text-center text-4xl pt-4">
-                {loserPlan.emoji}
-              </div>
+              <div className="text-center text-4xl pt-4">{loserPlan.emoji}</div>
             </CardContent>
           </Card>
         </div>

@@ -23,12 +23,12 @@ export default function SubscriptionCancel() {
           {/* Message */}
           <div className="space-y-4 text-muted-foreground max-w-md">
             <p>
-              We&apos;re sorry to see you go! Your subscription has been cancelled and
-              you will not be charged again.
+              We&apos;re sorry to see you go! Your subscription has been cancelled and you will not
+              be charged again.
             </p>
             <p>
-              You&apos;ll continue to have access to premium features until the end of
-              your current billing period.
+              You&apos;ll continue to have access to premium features until the end of your current
+              billing period.
             </p>
           </div>
 
@@ -36,10 +36,7 @@ export default function SubscriptionCancel() {
           <div className="pt-8 text-sm text-muted-foreground">
             <p>
               We&apos;d love to hear your feedback.{" "}
-              <a
-                href="mailto:contact@unstuck.gg"
-                className="text-foreground hover:underline"
-              >
+              <a href="mailto:contact@unstuck.gg" className="text-foreground hover:underline">
                 Contact us
               </a>
             </p>
@@ -47,12 +44,7 @@ export default function SubscriptionCancel() {
 
           {/* Logo and Brand */}
           <div className="flex items-center gap-3 pt-4">
-            <Image
-              src="/unstuck-logo-eye.svg"
-              alt="Unstuck Logo"
-              width={40}
-              height={40}
-            />
+            <Image src="/unstuck-logo-eye.svg" alt="Unstuck Logo" width={40} height={40} />
             <span className="text-2xl font-bold font-mokoto">Unstuck</span>
           </div>
         </div>
@@ -60,4 +52,3 @@ export default function SubscriptionCancel() {
     </div>
   );
 }
-

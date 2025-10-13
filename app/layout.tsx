@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Unstuck - AI Gaming Assistant",
-  description: "Level up your game with AI-powered assistance. Transparent desktop overlay for instant help while you play.",
+  description:
+    "Level up your game with AI-powered assistance. Transparent desktop overlay for instant help while you play.",
 };
 
 export default function RootLayout({
@@ -26,36 +27,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-            <head>
-        <link
-          rel="preload"
-          href="/fonts/Mokoto.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin=""
-        />
+      <head>
+        <link rel="preload" href="/fonts/Mokoto.ttf" as="font" type="font/ttf" crossOrigin="" />
         {/* Preload critical assets to prevent loading delays */}
-        <link
-          rel="preload"
-          href="/fantasy-landscape.svg"
-          as="image"
-        />
-        <link
-          rel="prefetch"
-          href="/unstuck-demo.mp4"
-        />
+        <link rel="preload" href="/fantasy-landscape.svg" as="image" />
+        <link rel="prefetch" href="/unstuck-demo.mp4" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          forcedTheme="dark"
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" forcedTheme="dark" disableTransitionOnChange>
           {children}
         </ThemeProvider>
-        {process.env.NODE_ENV === 'production' && process.env.VERCEL === '1' && (
-          <Analytics />
-        )}
+        {process.env.NODE_ENV === "production" && process.env.VERCEL === "1" && <Analytics />}
       </body>
     </html>
   );

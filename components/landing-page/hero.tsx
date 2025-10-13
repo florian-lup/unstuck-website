@@ -6,13 +6,14 @@ export function Hero() {
     <section className="container mx-auto px-6 pt-32 pb-20">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
-        <h1 className="text-xl font-bold tracking-tight md:text-6xl mb-5 text-gradient">
+        <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 text-gradient">
           A teammate that won&apos;t go AFK
         </h1>
 
         {/* Description */}
-        <p className="text-base md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-          Unstuck is a desktop AI app that runs as a transparent overlay on top of your game to provide fast, accurate information while you play.
+        <p className="text-sm md:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          Unstuck is a desktop AI app that runs as a transparent overlay on top of your game to
+          provide fast, accurate information while you play.
         </p>
 
         {/* CTA Buttons */}
