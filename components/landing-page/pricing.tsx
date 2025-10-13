@@ -71,15 +71,15 @@ const featureRows = [
 
 export function Pricing() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16">
+    <section className="container mx-auto px-6 py-20">
       <div className="mx-auto">
         {/* Section Header */}
-        <div className="mb-12 text-right">
+        <div className="mb-12 text-center">
           <Badge variant="default" className="mb-4 text-sm font-medium">Pricing</Badge>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
             Don&apos;t be the reason for the surrender vote
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl ml-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Start free and upgrade when you&apos;re ready to help maintain our spaghetti code
           </p>
         </div>

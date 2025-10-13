@@ -225,7 +225,7 @@ export function AiFeatures() {
   }, [currentConversationIndex]);
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-20 py-16">
+    <section className="container mx-auto px-6 py-20">
       <div className="mx-auto">
         {/* Section Header */}
         <div className="text-right mb-12">
