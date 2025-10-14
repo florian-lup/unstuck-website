@@ -36,7 +36,7 @@ const agents = [
 
 export function AgentFeatures() {
   return (
-    <section className="container mx-auto px-6 py-20">
+    <section className="container mx-auto px-6 lg:px-10 xl:px-2 py-20">
       <div className="mx-auto">
         {/* Section Header */}
         <div className="text-left mb-12">
