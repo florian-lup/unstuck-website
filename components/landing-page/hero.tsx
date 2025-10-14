@@ -28,7 +28,7 @@ export function Hero() {
       {/* Demo Video */}
       <div className="flex justify-center mt-12 w-full">
         <video
-          className="rounded-xl w-full h-auto lg:h-[600px] xl:h-[700px] object-contain lg:object-cover"
+          className="rounded-xl w-full h-auto lg:h-[600px] xl:h-[700px] object-contain lg:object-cover [&::-webkit-media-controls]:hidden [&::-webkit-media-controls-panel]:hidden [&::-webkit-media-controls-play-button]:hidden [&::-webkit-media-controls-start-playback-button]:hidden"
           autoPlay
           muted
           loop
@@ -36,6 +36,7 @@ export function Hero() {
           preload="metadata"
           disablePictureInPicture
           controlsList="nodownload nofullscreen noremoteplayback"
+          style={{ pointerEvents: 'none' }}
         >
           <source src="/unstuck-demo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
