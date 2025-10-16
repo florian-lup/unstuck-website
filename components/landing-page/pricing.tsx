@@ -12,7 +12,7 @@ const plans = [
     priceDetail: "",
     features: {
       overlay: true,
-      queries: "150 lifetime",
+      queries: "150",
       voiceChat: "60",
       agents: false,
       models: "Cost efficient",
@@ -25,24 +25,11 @@ const plans = [
     priceDetail: "/ month",
     features: {
       overlay: true,
-      queries: "300 per month",
-      voiceChat: "150",
-      agents: false,
+      queries: "Unlimited",
+      voiceChat: "100 / month",
+      agents: "Coming Soon",
       models: "Smart",
       tokens: "Limited",
-    },
-  },
-  {
-    name: "Pro",
-    price: "£15",
-    priceDetail: "/ month",
-    features: {
-      overlay: true,
-      queries: "Unlimited",
-      voiceChat: "Unlimited",
-      agents: true,
-      models: "Reasoning",
-      tokens: "Unlimited",
     },
   },
 ];
@@ -71,7 +58,7 @@ const featureRows = [
 
 export function Pricing() {
   return (
-    <section className="container mx-auto px-6 py-20">
+    <section className="container mx-auto px-6 xl:px-10 py-20">
       <div className="mx-auto">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -87,7 +74,7 @@ export function Pricing() {
         </div>
 
         {/* Pricing Layout: Table + Loser Card */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:items-stretch items-start">
+        <div className="flex flex-col lg:flex-row gap-6 lg:items-stretch items-center justify-center">
           {/* Mobile Cards (visible only on mobile) */}
           <div className="flex-1 w-full md:hidden space-y-4">
             {plans.map((plan, index) => (
@@ -103,11 +90,6 @@ export function Pricing() {
                     {index === 1 && (
                       <Badge variant="default" className="text-xs">
                         Popular
-                      </Badge>
-                    )}
-                    {index === 2 && (
-                      <Badge variant="secondary" className="text-xs">
-                        Coming Soon
                       </Badge>
                     )}
                   </div>
@@ -145,9 +127,9 @@ export function Pricing() {
           </div>
 
           {/* Pricing Table (hidden on mobile) */}
-          <div className="hidden md:block flex-1 w-full overflow-hidden">
+          <div className="hidden md:block flex-1 overflow-hidden">
             {/* Plan Headers */}
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-3">
               <div className="p-6"></div>
               {plans.map((plan, index) => (
                 <div key={index} className="p-4 text-center">
@@ -163,7 +145,7 @@ export function Pricing() {
             </div>
 
             {/* Features Header */}
-            <div className="grid grid-cols-4 border-b border-border/50">
+            <div className="grid grid-cols-3 border-b border-border/50">
               <div className="p-4">
                 <h4 className="text-xl font-bold">Features</h4>
               </div>
@@ -178,16 +160,11 @@ export function Pricing() {
                   Popular
                 </Badge>
               </div>
-              <div className="p-4 flex items-center justify-center">
-                <Badge variant="secondary" className="text-xs">
-                  Coming Soon
-                </Badge>
-              </div>
             </div>
 
             {/* Feature Rows */}
             {featureRows.map((row, rowIndex) => (
-              <div key={rowIndex} className="grid grid-cols-4 border-b border-border/50">
+              <div key={rowIndex} className="grid grid-cols-3 border-b border-border/50">
                 <div className="p-4 font-medium">{row.label}</div>
                 {plans.map((plan, planIndex) => {
                   const value = plan.features[row.key];

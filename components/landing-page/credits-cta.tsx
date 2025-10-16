@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 
 export function CreditsCTA() {
   return (
-    <section className="container mx-auto px-6 py-20">
+    <section className="container mx-auto px-6 xl:px-10 py-20">
       <div className="max-w-4xl text-left">
         {/* Credits Card */}
         <div className="text-left">
