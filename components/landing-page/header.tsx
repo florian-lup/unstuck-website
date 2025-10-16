@@ -5,7 +5,7 @@ import { Download } from "lucide-react";
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-10 xl:px-2">
+      <div className="container mx-auto flex h-16 items-center justify-between px-6">
         {/* Logo and Brand */}
         <div className="flex items-center gap-3">
           <Image src="/unstuck-logo-eye.svg" alt="Unstuck Logo" width={35} height={35} />
