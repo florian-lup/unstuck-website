@@ -41,7 +41,7 @@ export function AgentFeatures() {
         {/* Section Header */}
         <div className="text-left mb-12">
           <Badge variant="default" className="mb-4 text-sm font-medium">
-            Agents
+            Agents Coming Soon
           </Badge>
           <h2 className="text-2xl font-bold tracking-tight md:text-4xl mb-6">
             Not the team you want, but the team you need

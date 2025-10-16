@@ -4,9 +4,9 @@ import { Download } from "lucide-react";
 export function CreditsCTA() {
   return (
     <section className="container mx-auto px-6 xl:px-10 py-20">
-      <div className="max-w-4xl text-left">
+      <div className="max-w-4xl mx-auto">
         {/* Credits Card */}
-        <div className="text-left">
+        <div className="text-center mx-auto">
           {/* Heading */}
           <div className="border-b border-primary">
             <h2 className="text-2xl font-semibold md:text-4xl mb-5 text-gradient">
@@ -15,7 +15,7 @@ export function CreditsCTA() {
           </div>
 
           {/* CTA Button and Info */}
-          <div className="flex items-center gap-4 pt-4">
+          <div className="flex items-center justify-center gap-4 pt-4">
             <Button size="sm" className="gap-2 text-sm">
               <Download className="size-4" />
               Download Unstuck
