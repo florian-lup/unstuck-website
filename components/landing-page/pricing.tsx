@@ -12,8 +12,8 @@ const plans = [
     priceDetail: "",
     features: {
       overlay: true,
-      queries: "150",
-      voiceChat: "60",
+      queries: "60",
+      voiceChat: "30",
       agents: false,
       models: "Cost efficient",
       tokens: "Limited",
@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: "Community",
-    price: "£7",
+    price: "$10",
     priceDetail: "/ month",
     features: {
       overlay: true,
