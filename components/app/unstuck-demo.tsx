@@ -159,7 +159,7 @@ export function UnstuckApp() {
   return (
     <div
       ref={componentRef}
-      className="w-full max-w-[624px] mx-auto flex flex-col h-[500px] gap-3 p-3 rounded-xl"
+      className="w-full max-w-[624px] mx-auto flex flex-col h-[500px] gap-3 p-3 rounded-xl relative"
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
         cursor: isDragging ? "grabbing" : "default",
@@ -167,7 +167,7 @@ export function UnstuckApp() {
     >
       {/* Top Navigation Bar */}
       <div
-        className="flex items-center justify-between px-1 py-1 rounded-full overflow-x-scroll scrollbar-none"
+        className="flex items-center justify-between px-1 py-1 rounded-full overflow-x-auto scrollbar-none"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
       >
         <div className="flex items-center gap-2">
@@ -184,27 +184,6 @@ export function UnstuckApp() {
               <span className="text-sm">{selectedGame}</span>
               <ChevronDown className={`size-3 ml-auto ${isDropdownOpen ? "rotate-180" : ""}`} />
             </Button>
-
-            {isDropdownOpen && (
-              <div
-                className="absolute top-full left-0 mt-2 rounded-xl border-0 p-1 min-w-[200px] z-50"
-                style={{
-                  backgroundColor: "rgba(0, 0, 0, 0.3)",
-                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.3)",
-                }}
-              >
-                {games.map((game) => (
-                  <button
-                    key={game}
-                    onClick={() => handleGameSelect(game)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:!bg-white/10 hover:text-white cursor-pointer rounded-full bg-transparent"
-                    style={{ backgroundColor: "transparent" }}
-                  >
-                    {game}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Voice Button */}
@@ -266,6 +245,31 @@ export function UnstuckApp() {
           </Button>
         </div>
       </div>
+      
+      {/* Dropdown Menu - Rendered outside scroll container */}
+      {isDropdownOpen && (
+        <div
+          className="absolute rounded-xl border-0 p-1 max-w-[200px] z-50"
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.3)",
+            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.3)",
+            top: "calc(3rem + 12px)",
+            left: "16px",
+          }}
+        >
+          {games.map((game) => (
+            <button
+              key={game}
+              onClick={() => handleGameSelect(game)}
+              className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:!bg-white/10 hover:text-white cursor-pointer rounded-full bg-transparent"
+              style={{ backgroundColor: "transparent" }}
+            >
+              {game}
+            </button>
+          ))}
+        </div>
+      )}
+      
       {/*Chat Interface*/}
       {isChatOpen && (
         <>

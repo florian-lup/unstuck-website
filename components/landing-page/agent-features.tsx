@@ -27,7 +27,7 @@ const agents = [
   },
   {
     name: "Troubleshooting",
-    badge: "Fix It",
+    badge: "Fix",
     description:
       "Before you blame the devs, try updating those drivers you've been ignoring for six months. We'll walk you through basic PC maintenance and game settings your 'setup' desperately needs.",
     highlight: "Yes, it's probably your drivers",
