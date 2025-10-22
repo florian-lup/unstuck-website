@@ -294,11 +294,15 @@ export function AiFeatures() {
             {/* Right side - chat message area */}
             <div className="w-full lg:w-1/2 bg-background/50 rounded-lg border relative overflow-hidden order-2 h-[400px] lg:h-[400px]">
               <video
-                className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none video-no-controls"
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="auto"
+                disablePictureInPicture
+                controlsList="nodownload nofullscreen noremoteplayback"
+                style={{ pointerEvents: 'none' }}
               >
                 <source src="/enchanted-room.mp4" type="video/mp4" />
               </video>

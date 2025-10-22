@@ -28,12 +28,12 @@ export function Hero() {
       {/* Demo Video */}
       <div className="flex justify-center mt-12 w-full">
         <video
-          className="rounded-xl w-full h-auto lg:h-[600px] xl:h-[700px] object-contain lg:object-cover [&::-webkit-media-controls]:hidden [&::-webkit-media-controls-panel]:hidden [&::-webkit-media-controls-play-button]:hidden [&::-webkit-media-controls-start-playback-button]:hidden"
+          className="rounded-xl w-full h-auto lg:h-[600px] xl:h-[700px] object-contain lg:object-cover video-no-controls"
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           disablePictureInPicture
           controlsList="nodownload nofullscreen noremoteplayback"
           style={{ pointerEvents: 'none' }}
