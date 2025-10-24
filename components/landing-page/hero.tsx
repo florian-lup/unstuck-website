@@ -18,9 +18,11 @@ export function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex justify-center">
-          <Button size="lg" className="gap-2 w-full sm:w-auto">
-            <Download className="size-5" />
-            Download for Windows
+          <Button size="lg" className="gap-2 w-full sm:w-auto" asChild>
+            <a href={process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL} download>
+              <Download className="size-5" />
+              Download for Windows
+            </a>
           </Button>
         </div>
       </div>

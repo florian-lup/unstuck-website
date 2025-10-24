@@ -26,7 +26,7 @@ const plans = [
     features: {
       overlay: true,
       queries: "Unlimited",
-      voiceChat: "100 / month",
+      voiceChat: "150 / month",
       agents: "Coming Soon",
       models: "Smart",
       tokens: "Limited",
@@ -81,9 +81,11 @@ export function Pricing() {
               <CardHeader className="text-center pb-4">
                 <div className="flex justify-center mb-2">
                   {index === 0 && (
-                    <Button size="sm" variant="outline" className="h-7 text-xs">
-                      <Download className="size-3 mr-1" />
-                      Download
+                    <Button size="sm" variant="outline" className="h-7 text-xs" asChild>
+                      <a href={process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL} download>
+                        <Download className="size-3 mr-1" />
+                        Download
+                      </a>
                     </Button>
                   )}
                   {index === 1 && (
