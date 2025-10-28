@@ -17,7 +17,7 @@ export function CreditsCTA() {
           {/* CTA Button and Info */}
           <div className="flex items-center justify-center gap-4 pt-4">
             <Button size="sm" className="gap-2 text-sm" asChild>
-              <a href={process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL} download>
+              <a href="/api/download">
                 <Download className="size-4" />
                 Download Unstuck
               </a>

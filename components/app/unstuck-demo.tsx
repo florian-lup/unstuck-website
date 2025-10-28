@@ -369,7 +369,7 @@ export function UnstuckApp() {
                           style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                           asChild
                         >
-                          <a href={process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL} download>
+                          <a href="/api/download">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="18"

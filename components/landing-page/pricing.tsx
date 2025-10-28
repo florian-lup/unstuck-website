@@ -82,7 +82,7 @@ export function Pricing() {
                 <div className="flex justify-center mb-2">
                   {index === 0 && (
                     <Button size="sm" variant="outline" className="h-7 text-xs" asChild>
-                      <a href={process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL} download>
+                      <a href="/api/download">
                         <Download className="size-3 mr-1" />
                         Download
                       </a>

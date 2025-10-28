@@ -15,7 +15,7 @@ export function Header() {
         {/* Actions */}
         <div className="flex items-center gap-3">
           <Button size="sm" className="gap-2" asChild>
-            <a href={process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL} download>
+            <a href="/api/download">
               <Download className="size-4" />
               <span className="hidden sm:inline">Get Started for Free</span>
             </a>
