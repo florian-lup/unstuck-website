@@ -245,7 +245,7 @@ export function UnstuckApp() {
           </Button>
         </div>
       </div>
-      
+
       {/* Dropdown Menu - Rendered outside scroll container */}
       {isDropdownOpen && (
         <div
@@ -269,7 +269,7 @@ export function UnstuckApp() {
           ))}
         </div>
       )}
-      
+
       {/*Chat Interface*/}
       {isChatOpen && (
         <>

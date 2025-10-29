@@ -302,7 +302,7 @@ export function AiFeatures() {
                 preload="auto"
                 disablePictureInPicture
                 controlsList="nodownload nofullscreen noremoteplayback"
-                style={{ pointerEvents: 'none' }}
+                style={{ pointerEvents: "none" }}
               >
                 <source src="/enchanted-room.mp4" type="video/mp4" />
               </video>

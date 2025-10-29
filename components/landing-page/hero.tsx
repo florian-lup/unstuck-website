@@ -38,7 +38,7 @@ export function Hero() {
           preload="auto"
           disablePictureInPicture
           controlsList="nodownload nofullscreen noremoteplayback"
-          style={{ pointerEvents: 'none' }}
+          style={{ pointerEvents: "none" }}
         >
           <source src="/unstuck-demo.mp4" type="video/mp4" />
           Your browser does not support the video tag.

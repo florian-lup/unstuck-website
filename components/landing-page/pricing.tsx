@@ -77,7 +77,7 @@ export function Pricing() {
         <div className="flex flex-col lg:flex-row gap-6 items-stretch justify-center max-w-6xl mx-auto">
           {/* Plan Cards */}
           {plans.map((plan, index) => (
-            <Card key={index} className={`flex-1 ${index === 1 ? 'border-2 border-primary' : ''}`}>
+            <Card key={index} className={`flex-1 ${index === 1 ? "border-2 border-primary" : ""}`}>
               <CardHeader className="text-center pb-4">
                 <div className="flex justify-center mb-2">
                   {index === 0 && (
@@ -106,7 +106,10 @@ export function Pricing() {
                 {featureRows.map((row, rowIndex) => {
                   const value = plan.features[row.key];
                   return (
-                    <div key={rowIndex} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
+                    <div
+                      key={rowIndex}
+                      className="flex items-center justify-between py-2 border-b border-border/50 last:border-0"
+                    >
                       <span className="font-medium text-sm">{row.label}</span>
                       <div className="flex items-center">
                         {typeof value === "boolean" ? (

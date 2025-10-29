@@ -18,6 +18,33 @@ export const metadata: Metadata = {
   title: "Unstuck - AI Gaming Assistant",
   description:
     "Level up your game with AI-powered assistance. Transparent desktop overlay for instant help while you play.",
+  keywords: [
+    "AI gaming assistant",
+    "game helper",
+    "gaming overlay",
+    "AI game guide",
+    "gaming AI",
+    "desktop overlay",
+    "gaming assistant",
+  ],
+  authors: [{ name: "Unstuck" }],
+  creator: "Unstuck",
+  publisher: "Unstuck",
+  metadataBase: new URL("https://unstuck.gg"),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
