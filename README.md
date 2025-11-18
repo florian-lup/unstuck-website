@@ -1,65 +1,35 @@
-## Next.js Starter Kit
+# Unstuck Website
 
-Production-ready starter for building modern apps with Next.js 15, React 19, and Tailwind CSS v4. Includes a polished UI kit (Radix + shadcn-style components), dark/system theming, strong defaults for performance and security, and one-click deploy to Vercel.
+Marketing website for [Unstuck](https://unstuck.gg) - an AI-powered gaming assistant with transparent desktop overlay.
 
-### Features
+## Tech Stack
 
-- **Next.js 15 (App Router)**: File-based routing, React Server Components
-- **React 19** with **Turbopack** for dev speed
-- **Tailwind CSS v4** (no config file) with CSS variables and animations
-- **Radix UI + shadcn-style components** in `components/ui`
-- **Dark/System theme** via `next-themes` and a built-in `ThemeToggle`
-- **Security headers + CSP** (auto-adjusts on Vercel)
-- **Vercel Analytics** gated for production on Vercel
-- **TypeScript**, strict mode, path aliases (`@/*`)
-- **Prettier + ESLint** (Next + Prettier config)
+- **Framework:** Next.js 15
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI, shadcn/ui
+- **Package Manager:** pnpm
 
-### Stack
+## Getting Started
 
-- **Framework**: Next.js 15 (`next`), React 19
-- **Styling**: Tailwind CSS v4 (`@tailwindcss/postcss`), `tw-animate-css`
-- **UI**: Radix primitives, `lucide-react`, components in `components/ui`
-- **Theming**: `next-themes`
-- **Build/Dev**: Turbopack (`next dev --turbopack`)
-
-### Quickstart
+Install dependencies:
 
 ```bash
-# Install deps (recommended)
 pnpm install
-
-# Start dev server
-pnpm dev
-
-# Type-check, lint, format
-pnpm lint
-pnpm format
-pnpm format:check
-
-# Build & run production
-pnpm build && pnpm start
 ```
 
-Requirements: Node 18.18+ (Node 20+ recommended) and pnpm.
+Run the development server:
 
-### Analytics
+```bash
+pnpm dev
+```
 
-`@vercel/analytics` only loads in production on Vercel. No local env vars required.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Scripts
+## Scripts
 
-- **dev**: `next dev --turbopack`
-- **build**: `next build`
-- **start**: `next start`
-- **lint**: `next lint`
-- **format**: `prettier --write .`
-- **format:check**: `prettier --check .`
-
-### Deployment
-
-- One-click deploy to Vercel: the app ships with headers and CSP optimized for Vercel.
-- You can also self-host: run `pnpm build && pnpm start` behind your own reverse proxy.
-
-### License
-
-MIT — see `LICENSE`.
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
+- `pnpm format` - Format code with Prettier
